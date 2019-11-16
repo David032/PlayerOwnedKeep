@@ -1,33 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
     //Player's head
     public GameObject targetPoint;
 
-    void Update() 
+    public bool panL;
+    bool panR;
+    bool PanU;
+    bool panD;
+
+    public void PanLeft(InputAction.CallbackContext context) 
     {
-        camMove();
-
-    }
-
-    void camMove() 
-    {
-        float camXInput = Input.GetAxis("CamX");
-        print(camXInput);
-        float camYInput = Input.GetAxis("CamY");
-        print(camYInput);
-
-        if (camXInput <= -0.2)
+        panL = !panL;
+        while (panL)
         {
-            transform.RotateAround(targetPoint.transform.position, transform.up*-1f, 1f);
+            transform.RotateAround(targetPoint.transform.position, transform.up, 10f);
+            transform.LookAt(targetPoint.transform);
         }
-        //if (camXInput >= 0.2)
-        //{
-        //    transform.RotateAround(targetPoint.transform.position, transform.up, -1f);
-        //}
-
+    }
+    public void PanRight(InputAction.CallbackContext context) 
+    {
+        transform.RotateAround(targetPoint.transform.position, transform.up, -10f);
+        transform.LookAt(targetPoint.transform);
+    }
+    public void PanUp(InputAction.CallbackContext context)
+    {
+        transform.RotateAround(targetPoint.transform.position, transform.right, -10f);
+        transform.LookAt(targetPoint.transform);
+    }
+    public void PanDown(InputAction.CallbackContext context)
+    {
+        transform.RotateAround(targetPoint.transform.position, transform.right, 10f);
+        transform.LookAt(targetPoint.transform);
     }
 }

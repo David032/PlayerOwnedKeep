@@ -130,7 +130,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "PanUp",
                     "isComposite": false,
                     "isPartOfComposite": false

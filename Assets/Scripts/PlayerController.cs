@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
+using UnityEngine.GameFoundation;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,6 +20,16 @@ public class PlayerController : MonoBehaviour
         anim.SetInteger("WeaponType_int", 0);
         anim.SetInteger("MeleeType_int", 0);
 
+        GameFoundation.Initialize();
+        TestInventory();
+    }
+
+    void TestInventory() 
+    {
+        InventoryItem coinItem = Wallet.GetItem("coin");
+        Debug.LogFormat("coins in wallet at start: {0}", coinItem.quantity);
+        coinItem.quantity -= 25;
+        Debug.LogFormat("coins in wallet: {0}", coinItem.quantity);
     }
 
     void Update()

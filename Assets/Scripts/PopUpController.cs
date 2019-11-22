@@ -1,10 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PopUpController : MonoBehaviour
 {
-    public TextMesh text;
+    public TextMeshProUGUI text;
+    public Transform player;
+    void Awake() 
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
+    void Update() 
+    {
+        transform.LookAt(player);
+    }
+
     public void SetText(string inputText) 
     {
         text.text = inputText;

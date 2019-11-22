@@ -23,12 +23,14 @@ public class ChestController : MonoBehaviour
             examineWindow.transform.localScale.Set(0.1f, 0.1f, 0.1f);
             examineWindow.GetComponent<PopUpController>().SetText(ExamineText);
             isBeingExamined = true;
+            StartCoroutine(TimeOut(examineWindow));
         }
     }
-    void OnMouseExit()
+
+    IEnumerator TimeOut(GameObject window) 
     {
-        //The mouse is no longer hovering over the GameObject so output this message each frame
-        Debug.Log("Mouse is no longer on GameObject.");
+        yield return new WaitForSeconds(5f);
+        Destroy(window);
         isBeingExamined = false;
     }
 }

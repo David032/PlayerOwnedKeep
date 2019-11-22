@@ -57,6 +57,14 @@ public class @ControlScheme : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""333bcc27-baa0-49b7-bf28-2059af392dab"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -156,6 +164,28 @@ public class @ControlScheme : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""PanDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d2c4fe01-b86a-4301-b7f0-5313958f0202"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d5bd2f49-8d9e-4afe-b772-1e9e60dcb601"",
+                    ""path"": ""<Touchscreen>/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -735,6 +765,7 @@ public class @ControlScheme : IInputActionCollection, IDisposable
         m_Player_PanRight = m_Player.FindAction("PanRight", throwIfNotFound: true);
         m_Player_PanUp = m_Player.FindAction("PanUp", throwIfNotFound: true);
         m_Player_PanDown = m_Player.FindAction("PanDown", throwIfNotFound: true);
+        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -802,6 +833,7 @@ public class @ControlScheme : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_PanRight;
     private readonly InputAction m_Player_PanUp;
     private readonly InputAction m_Player_PanDown;
+    private readonly InputAction m_Player_Interact;
     public struct PlayerActions
     {
         private @ControlScheme m_Wrapper;
@@ -811,6 +843,7 @@ public class @ControlScheme : IInputActionCollection, IDisposable
         public InputAction @PanRight => m_Wrapper.m_Player_PanRight;
         public InputAction @PanUp => m_Wrapper.m_Player_PanUp;
         public InputAction @PanDown => m_Wrapper.m_Player_PanDown;
+        public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -835,6 +868,9 @@ public class @ControlScheme : IInputActionCollection, IDisposable
                 @PanDown.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPanDown;
                 @PanDown.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPanDown;
                 @PanDown.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPanDown;
+                @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -854,6 +890,9 @@ public class @ControlScheme : IInputActionCollection, IDisposable
                 @PanDown.started += instance.OnPanDown;
                 @PanDown.performed += instance.OnPanDown;
                 @PanDown.canceled += instance.OnPanDown;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
@@ -1023,6 +1062,7 @@ public class @ControlScheme : IInputActionCollection, IDisposable
         void OnPanRight(InputAction.CallbackContext context);
         void OnPanUp(InputAction.CallbackContext context);
         void OnPanDown(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

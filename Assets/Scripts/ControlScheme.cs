@@ -65,6 +65,14 @@ public class @ControlScheme : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""HorizontalPan"",
+                    ""type"": ""Button"",
+                    ""id"": ""168d66e6-fc4b-4b53-a4f9-957d200ba9f7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -188,6 +196,39 @@ public class @ControlScheme : IInputActionCollection, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Horizontal"",
+                    ""id"": ""ceae67b0-9391-4539-852a-3a2c7a81c710"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalPan"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""b5488ee0-f4b3-4556-b954-2e8d8c030e5d"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""HorizontalPan"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""276a4a6f-dcf9-473b-ba56-ff25b96e2920"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""HorizontalPan"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -766,6 +807,7 @@ public class @ControlScheme : IInputActionCollection, IDisposable
         m_Player_PanUp = m_Player.FindAction("PanUp", throwIfNotFound: true);
         m_Player_PanDown = m_Player.FindAction("PanDown", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_HorizontalPan = m_Player.FindAction("HorizontalPan", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -834,6 +876,7 @@ public class @ControlScheme : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_PanUp;
     private readonly InputAction m_Player_PanDown;
     private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_HorizontalPan;
     public struct PlayerActions
     {
         private @ControlScheme m_Wrapper;
@@ -844,6 +887,7 @@ public class @ControlScheme : IInputActionCollection, IDisposable
         public InputAction @PanUp => m_Wrapper.m_Player_PanUp;
         public InputAction @PanDown => m_Wrapper.m_Player_PanDown;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @HorizontalPan => m_Wrapper.m_Player_HorizontalPan;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -871,6 +915,9 @@ public class @ControlScheme : IInputActionCollection, IDisposable
                 @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @HorizontalPan.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalPan;
+                @HorizontalPan.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalPan;
+                @HorizontalPan.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalPan;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -893,6 +940,9 @@ public class @ControlScheme : IInputActionCollection, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @HorizontalPan.started += instance.OnHorizontalPan;
+                @HorizontalPan.performed += instance.OnHorizontalPan;
+                @HorizontalPan.canceled += instance.OnHorizontalPan;
             }
         }
     }
@@ -1063,6 +1113,7 @@ public class @ControlScheme : IInputActionCollection, IDisposable
         void OnPanUp(InputAction.CallbackContext context);
         void OnPanDown(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnHorizontalPan(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -16,11 +16,15 @@ public enum Passage
 
 public class TimeManager : MonoBehaviour
 {
+    public TextMeshProUGUI AmPmSpot;
+
     int days;
     public TextMeshProUGUI daySpot;
+
     [Range(0, 10)]
     int minutes;
     public TextMeshProUGUI minuteSpot;
+
     [Range(0,60)]
     int seconds;
     public TextMeshProUGUI secondsSpot;
@@ -31,7 +35,7 @@ public class TimeManager : MonoBehaviour
     public int timeRate = 2;
 
     public Cycle timeCycle = Cycle.Day;
-    Passage timePassage = Passage.AM; 
+    public Passage timePassage = Passage.AM; 
 
     void Update()
     {
@@ -42,7 +46,6 @@ public class TimeManager : MonoBehaviour
         seconds = Mathf.RoundToInt(timer) - (minutes * 60);
         if (minutes >= 10)
         {
-            print("beepboop");
             days += 1;
             timer -= 600;
         }
@@ -56,6 +59,14 @@ public class TimeManager : MonoBehaviour
         secondsSpot.text = seconds.ToString();
         minuteSpot.text = minutes.ToString();
         daySpot.text = "Day: " + days.ToString();
+        if (timePassage == Passage.AM)
+        {
+            AmPmSpot.text = "AM";
+        }
+        else if (timePassage == Passage.PM)
+        {
+            AmPmSpot.text = "PM";
+        }
     }
 
     void UpdateIndicators() 
@@ -67,6 +78,47 @@ public class TimeManager : MonoBehaviour
         else
         {
             timeCycle = Cycle.Night;
+        }
+
+        if (minutes == 0)
+        {
+            timePassage = Passage.AM;
+        }
+        if (minutes == 1)
+        {
+            timePassage = Passage.AM;
+        }
+        if (minutes == 2)
+        {
+            timePassage = Passage.AM;
+        }
+        if (minutes == 3)
+        {
+            timePassage = Passage.AM;
+        }
+        if (minutes == 4)
+        {
+            timePassage = Passage.AM;
+        }
+        if (minutes == 5)
+        {
+            timePassage = Passage.AM;
+        }
+        if (minutes == 6)
+        {
+            timePassage = Passage.PM;
+        }
+        if (minutes == 7)
+        {
+            timePassage = Passage.PM;
+        }
+        if (minutes == 8)
+        {
+            timePassage = Passage.PM;
+        }
+        if (minutes == 9) 
+        {
+            timePassage = Passage.PM;
         }
     }
 }

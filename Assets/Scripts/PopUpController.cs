@@ -12,13 +12,9 @@ public class PopUpController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    void Update() 
-    {
-        transform.LookAt(player);
-    }
-
     public void SetText(string inputText) 
     {
         text.text = inputText;
+        transform.LookAt(player);
     }
 }

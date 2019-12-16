@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: cd515c758f00e1f4485510a36d69dd46,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -723,6 +724,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43bb48f07d067d848b1d4c90aa160d5d, type: 3}
+--- !u!1 &670616028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2771279389206569466, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1105126117558389486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &673194080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1048,7 +1055,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882722449}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 22.53, z: -32.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1509,6 +1516,64 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7345528526340595770}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1516028306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7345528527062561718, guid: 2e680b6f76e51cb4fa270fd8867d30bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7345528526340595770}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1516028307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516028306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716819c21d0fcde45abd660582a4d5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueWindow: {fileID: 5756390027507239324, guid: 2cbcb85a9d23e4144a4574d02942e107,
+    type: 3}
+  dialogueSpot: {fileID: 670616028}
+  iD: DefaultDialogue
+  windowText: If this shows up, it worked!
+  displayLeft: 1
+  displayRight: 0
+--- !u!114 &1516028314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516028306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716819c21d0fcde45abd660582a4d5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueWindow: {fileID: 5756390027507239324, guid: 2cbcb85a9d23e4144a4574d02942e107,
+    type: 3}
+  dialogueSpot: {fileID: 670616028}
+  iD: AltDialogue
+  windowText: If this shows up, the alt system works
+  displayLeft: 0
+  displayRight: 1
+--- !u!114 &1516028315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516028306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa91d68d77ccc9e4ca228b3f769540f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueOptions: []
+  currentOption: 0
 --- !u!1001 &1703147821
 PrefabInstance:
   m_ObjectHideFlags: 0

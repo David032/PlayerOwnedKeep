@@ -4337,7 +4337,7 @@ GameObject:
   - component: {fileID: -4176131698177864938}
   m_Layer: 0
   m_Name: SF_Character_Human_Knight_01
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

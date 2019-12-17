@@ -4545,7 +4545,7 @@ GameObject:
   - component: {fileID: 5170953264139825615}
   m_Layer: 0
   m_Name: SF_Character_Undead_King
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

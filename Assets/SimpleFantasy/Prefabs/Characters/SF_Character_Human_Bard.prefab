@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: -2676086298357565600}
   m_Layer: 0
   m_Name: SF_Character_Human_Bard
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1346,7 +1346,7 @@ GameObject:
   - component: {fileID: -5444844443799798878}
   m_Layer: 0
   m_Name: SF_Character_Undead_Footman_02
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

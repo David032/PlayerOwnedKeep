@@ -3349,6 +3349,8 @@ GameObject:
   - component: {fileID: -4982955704082718034}
   - component: {fileID: 3274116943201011772}
   - component: {fileID: -3661114709414092050}
+  - component: {fileID: 5749726705598770624}
+  - component: {fileID: 4469371152197493013}
   m_Layer: 0
   m_Name: SF_Character_Undead_Skeleton
   m_TagString: NPC
@@ -3492,6 +3494,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d246583b67570e242b6fec4658025f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5749726705598770624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15877e137662f3e48bd2467894a49e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opinionDiskNumber: {fileID: 0}
+  opinionDisk: {fileID: 0}
+--- !u!114 &4469371152197493013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94cb710644b641d47a91e1e4d6d0f288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  likes: 
+  dislikes: 
+  events: []
+  unforgettableEvents: []
+  opinion: 0
 --- !u!1 &176556
 GameObject:
   m_ObjectHideFlags: 0

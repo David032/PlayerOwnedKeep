@@ -11,5 +11,14 @@ public enum categories
     Neutral,
     Rich,
     Poor,
+    Helpful,
+    Cruel,
+    Cat,
+    Dog,
+    Spider,
+    Horse,
+    Trade,
+    Change,
+    StatusQuo,
 }
 

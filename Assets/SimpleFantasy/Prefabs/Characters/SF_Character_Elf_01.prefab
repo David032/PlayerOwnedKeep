@@ -1375,6 +1375,8 @@ GameObject:
   - component: {fileID: 5101005179341061584}
   - component: {fileID: -9171199423228524533}
   - component: {fileID: -813606408199666631}
+  - component: {fileID: -6345843419961720767}
+  - component: {fileID: -4312254855739183393}
   m_Layer: 0
   m_Name: SF_Character_Elf_01
   m_TagString: NPC
@@ -1518,6 +1520,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d246583b67570e242b6fec4658025f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6345843419961720767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15877e137662f3e48bd2467894a49e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opinionDiskNumber: {fileID: 0}
+  opinionDisk: {fileID: 0}
+--- !u!114 &-4312254855739183393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94cb710644b641d47a91e1e4d6d0f288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  likes: 
+  dislikes: 
+  events: []
+  unforgettableEvents: []
+  opinion: 0
 --- !u!1 &122406
 GameObject:
   m_ObjectHideFlags: 0

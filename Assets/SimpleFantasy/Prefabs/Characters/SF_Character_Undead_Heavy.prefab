@@ -2874,6 +2874,8 @@ GameObject:
   - component: {fileID: 8300265415541110898}
   - component: {fileID: 1669311550632301258}
   - component: {fileID: -5439897121026930921}
+  - component: {fileID: 3381468751300683884}
+  - component: {fileID: 7961163421084291543}
   m_Layer: 0
   m_Name: SF_Character_Undead_Heavy
   m_TagString: NPC
@@ -3017,6 +3019,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d246583b67570e242b6fec4658025f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3381468751300683884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15877e137662f3e48bd2467894a49e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opinionDiskNumber: {fileID: 0}
+  opinionDisk: {fileID: 0}
+--- !u!114 &7961163421084291543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94cb710644b641d47a91e1e4d6d0f288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  likes: 
+  dislikes: 
+  events: []
+  unforgettableEvents: []
+  opinion: 0
 --- !u!1 &148512
 GameObject:
   m_ObjectHideFlags: 0

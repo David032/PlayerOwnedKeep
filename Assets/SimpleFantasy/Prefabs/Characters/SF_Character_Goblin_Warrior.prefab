@@ -461,6 +461,8 @@ GameObject:
   - component: {fileID: -7840784333439379956}
   - component: {fileID: -1291574126381733298}
   - component: {fileID: -6880439283327639378}
+  - component: {fileID: 5503982216526596855}
+  - component: {fileID: -7449520134036852598}
   m_Layer: 0
   m_Name: SF_Character_Goblin_Warrior
   m_TagString: NPC
@@ -604,6 +606,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d246583b67570e242b6fec4658025f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5503982216526596855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15877e137662f3e48bd2467894a49e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opinionDiskNumber: {fileID: 0}
+  opinionDisk: {fileID: 0}
+--- !u!114 &-7449520134036852598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94cb710644b641d47a91e1e4d6d0f288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  likes: 
+  dislikes: 
+  events: []
+  unforgettableEvents: []
+  opinion: 0
 --- !u!1 &115158
 GameObject:
   m_ObjectHideFlags: 0

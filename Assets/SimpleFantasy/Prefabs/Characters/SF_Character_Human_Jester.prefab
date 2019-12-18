@@ -2677,6 +2677,8 @@ GameObject:
   - component: {fileID: -1192680055702749963}
   - component: {fileID: 2160424319537717850}
   - component: {fileID: 1595867808891659790}
+  - component: {fileID: 6633937714499362076}
+  - component: {fileID: 8656803206336520908}
   m_Layer: 0
   m_Name: SF_Character_Human_Jester
   m_TagString: NPC
@@ -2820,6 +2822,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d246583b67570e242b6fec4658025f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6633937714499362076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15877e137662f3e48bd2467894a49e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opinionDiskNumber: {fileID: 0}
+  opinionDisk: {fileID: 0}
+--- !u!114 &8656803206336520908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94cb710644b641d47a91e1e4d6d0f288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  likes: 
+  dislikes: 
+  events: []
+  unforgettableEvents: []
+  opinion: 0
 --- !u!1 &156510
 GameObject:
   m_ObjectHideFlags: 0

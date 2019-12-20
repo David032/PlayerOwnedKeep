@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
 public class NPCDialogue : NPCDialogueCore
 {
@@ -22,8 +19,7 @@ public class NPCDialogue : NPCDialogueCore
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Destroy(spawnedDialogue);
-            spawnedDialogue = null;
-            this.gameObject.GetComponent<NPCMultiDialogueController>().UpdateOptions();
+            spawnedDialogue = null;          
         }
     }
 
@@ -34,7 +30,6 @@ public class NPCDialogue : NPCDialogueCore
             GameObject DialogueWindow = Instantiate(dialogueWindow, dialogueSpot.transform.position, dialogueSpot.transform.rotation, dialogueSpot.transform); ;
             DialogueWindow.name = this.gameObject.ToString() + " Dialogue";
             DialogueWindow.GetComponent<DialogueInstance>().NewDialogueInstance(displayLeft, displayRight, windowText);
-            this.gameObject.GetComponent<NPCMultiDialogueController>().UpdateOptions();
             spawnedDialogue = DialogueWindow;
         }
     }

@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Samples/SimpleDemo/SimpleControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Samples/Input System/1.0.0-preview.3/Simple Demo/SimpleControls.inputactions'
 
 using System;
 using System.Collections;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @SimpleControls: IInputActionCollection, IDisposable
+public class @SimpleControls : IInputActionCollection, IDisposable
 {
     private InputActionAsset asset;
     public @SimpleControls()

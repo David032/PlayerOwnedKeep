@@ -8,8 +8,6 @@ public class DialogueInstance : MonoBehaviour
     public GameObject button;
     public GameObject leftWindow;
     public GameObject rightWindow;
-    public MeshRenderer leftCharacter;
-    public MeshRenderer rightCharacter;
     public TextMeshPro dialogueText;
 
     public void NewDialogueInstance(bool left, bool right, string text) 
@@ -19,15 +17,11 @@ public class DialogueInstance : MonoBehaviour
         {
             leftWindow.SetActive(true);
             rightWindow.SetActive(false);
-            leftCharacter.gameObject.SetActive(true);
-            rightCharacter.gameObject.SetActive(false);
         }
         if (right)
         {
             leftWindow.SetActive(false);
             rightWindow.SetActive(true);
-            leftCharacter.gameObject.SetActive(false);
-            rightCharacter.gameObject.SetActive(true);
         }
     }
 

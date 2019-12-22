@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 3975337314769320623}
   - component: {fileID: 3938612841283746042}
   - component: {fileID: -9159013151742272974}
+  - component: {fileID: -7781186734339210173}
   m_Layer: 0
   m_Name: SF_Character_Elf_King
   m_TagString: NPC
@@ -639,6 +640,22 @@ MonoBehaviour:
   events: []
   unforgettableEvents: []
   opinion: 0
+--- !u!114 &-7781186734339210173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35146b8ca1b44eb43b50fc33ce665498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebug: 1
+  detectionRate: 1
+  fieldOfView: 25
+  viewDistance: 25
 --- !u!1 &112432
 GameObject:
   m_ObjectHideFlags: 0

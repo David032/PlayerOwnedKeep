@@ -4307,6 +4307,7 @@ GameObject:
   - component: {fileID: 9163091430591236488}
   - component: {fileID: 6169805536877755686}
   - component: {fileID: 6504199714865466666}
+  - component: {fileID: -6289420724969861936}
   m_Layer: 0
   m_Name: SF_Character_Human_Knight_02
   m_TagString: NPC
@@ -4481,6 +4482,22 @@ MonoBehaviour:
   events: []
   unforgettableEvents: []
   opinion: 0
+--- !u!114 &-6289420724969861936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35146b8ca1b44eb43b50fc33ce665498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebug: 1
+  detectionRate: 1
+  fieldOfView: 25
+  viewDistance: 25
 --- !u!1 &190464
 GameObject:
   m_ObjectHideFlags: 0

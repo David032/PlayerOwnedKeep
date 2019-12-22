@@ -1320,6 +1320,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3733875801322127609, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 701
+      objectReference: {fileID: 0}
     - target: {fileID: 3733875801644834317, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3386,6 +3391,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -170466423897215288, guid: cb3ee88ed3236544bbbc13d60a79d21f,
+        type: 3}
+      propertyPath: viewDistance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: -170466423897215288, guid: cb3ee88ed3236544bbbc13d60a79d21f,
+        type: 3}
+      propertyPath: fieldOfView
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 139550, guid: cb3ee88ed3236544bbbc13d60a79d21f, type: 3}
       propertyPath: m_Name
       value: GatehouseGuard

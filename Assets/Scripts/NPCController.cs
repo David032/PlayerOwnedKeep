@@ -18,10 +18,4 @@ public class NPCController : MonoBehaviour
         anim.SetInteger("Animation_int", 1);
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

@@ -855,6 +855,7 @@ GameObject:
   - component: {fileID: -3797500403699156898}
   - component: {fileID: 7436294585638483991}
   - component: {fileID: 1035911584184815913}
+  - component: {fileID: -1233939438009257421}
   m_Layer: 0
   m_Name: SF_Character_Human_Doctor
   m_TagString: NPC
@@ -1029,6 +1030,22 @@ MonoBehaviour:
   events: []
   unforgettableEvents: []
   opinion: 0
+--- !u!114 &-1233939438009257421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35146b8ca1b44eb43b50fc33ce665498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebug: 1
+  detectionRate: 1
+  fieldOfView: 25
+  viewDistance: 25
 --- !u!1 &120372
 GameObject:
   m_ObjectHideFlags: 0

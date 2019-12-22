@@ -4546,6 +4546,8 @@ GameObject:
   - component: {fileID: -4305282026940490619}
   - component: {fileID: 2034860527965313188}
   - component: {fileID: -4559803992192631787}
+  - component: {fileID: -8223295420048896691}
+  - component: {fileID: -826121327684821101}
   m_Layer: 0
   m_Name: SF_Character_Undead_King
   m_TagString: NPC
@@ -4736,6 +4738,33 @@ MonoBehaviour:
   detectionRate: 1
   fieldOfView: 25
   viewDistance: 25
+--- !u!135 &-8223295420048896691
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 1.79, z: 0}
+--- !u!114 &-826121327684821101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43bd5ceb9998054b8edb236c2e8d57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebug: 1
+  detectionRate: 1
 --- !u!1 &197766
 GameObject:
   m_ObjectHideFlags: 0

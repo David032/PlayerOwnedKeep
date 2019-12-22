@@ -3092,6 +3092,8 @@ GameObject:
   - component: {fileID: -4698286713089975095}
   - component: {fileID: 2812925649703756733}
   - component: {fileID: 5752727829609049949}
+  - component: {fileID: 6610113574638505136}
+  - component: {fileID: 3866570331219145193}
   m_Layer: 0
   m_Name: SF_Character_Human_Knight_TinMan
   m_TagString: NPC
@@ -3282,6 +3284,33 @@ MonoBehaviour:
   detectionRate: 1
   fieldOfView: 25
   viewDistance: 25
+--- !u!135 &6610113574638505136
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165740}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 1.79, z: 0}
+--- !u!114 &3866570331219145193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43bd5ceb9998054b8edb236c2e8d57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebug: 1
+  detectionRate: 1
 --- !u!1 &165820
 GameObject:
   m_ObjectHideFlags: 0

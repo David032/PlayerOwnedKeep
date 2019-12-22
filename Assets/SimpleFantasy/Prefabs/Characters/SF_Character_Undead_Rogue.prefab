@@ -2883,6 +2883,8 @@ GameObject:
   - component: {fileID: -6686797957458333229}
   - component: {fileID: 5021220714781988947}
   - component: {fileID: 2015466661372146787}
+  - component: {fileID: -5607214433081121721}
+  - component: {fileID: 5176747250746121972}
   m_Layer: 0
   m_Name: SF_Character_Undead_Rogue
   m_TagString: NPC
@@ -3073,6 +3075,33 @@ MonoBehaviour:
   detectionRate: 1
   fieldOfView: 25
   viewDistance: 25
+--- !u!135 &-5607214433081121721
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 1.79, z: 0}
+--- !u!114 &5176747250746121972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43bd5ceb9998054b8edb236c2e8d57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebug: 1
+  detectionRate: 1
 --- !u!1 &157316
 GameObject:
   m_ObjectHideFlags: 0

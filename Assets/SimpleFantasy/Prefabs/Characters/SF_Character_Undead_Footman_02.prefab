@@ -1347,6 +1347,8 @@ GameObject:
   - component: {fileID: 1560258848836173451}
   - component: {fileID: -4232997876970197948}
   - component: {fileID: 7538467737960492144}
+  - component: {fileID: -2586866841440561913}
+  - component: {fileID: -2107129636709996434}
   m_Layer: 0
   m_Name: SF_Character_Undead_Footman_02
   m_TagString: NPC
@@ -1537,6 +1539,33 @@ MonoBehaviour:
   detectionRate: 1
   fieldOfView: 25
   viewDistance: 25
+--- !u!135 &-2586866841440561913
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 1.79, z: 0}
+--- !u!114 &-2107129636709996434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43bd5ceb9998054b8edb236c2e8d57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebug: 1
+  detectionRate: 1
 --- !u!1 &131770
 GameObject:
   m_ObjectHideFlags: 0

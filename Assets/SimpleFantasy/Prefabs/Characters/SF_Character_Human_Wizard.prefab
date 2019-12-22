@@ -452,6 +452,8 @@ GameObject:
   - component: {fileID: -112669784383218648}
   - component: {fileID: -2833293040426647376}
   - component: {fileID: 4387504615246527320}
+  - component: {fileID: -1952822105768454652}
+  - component: {fileID: 4980488150124591893}
   m_Layer: 0
   m_Name: SF_Character_Human_Wizard
   m_TagString: NPC
@@ -642,6 +644,33 @@ MonoBehaviour:
   detectionRate: 1
   fieldOfView: 25
   viewDistance: 25
+--- !u!135 &-1952822105768454652
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 1.79, z: 0}
+--- !u!114 &4980488150124591893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43bd5ceb9998054b8edb236c2e8d57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebug: 1
+  detectionRate: 1
 --- !u!1 &112236
 GameObject:
   m_ObjectHideFlags: 0

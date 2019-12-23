@@ -3000,6 +3000,7 @@ GameObject:
   - component: {fileID: -2509664006102595955}
   - component: {fileID: -4963564641478361434}
   - component: {fileID: 8788641368755520576}
+  - component: {fileID: -3797843361449921727}
   m_Layer: 0
   m_Name: SF_Character_Human_Knight_Dark
   m_TagString: NPC
@@ -3217,6 +3218,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableDebug: 1
   detectionRate: 1
+--- !u!114 &-3797843361449921727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b6f7e497487b748b38a5b2fcffa203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCBehaviourModel: 3
+  PatrollerPoints: []
 --- !u!1 &153968
 GameObject:
   m_ObjectHideFlags: 0

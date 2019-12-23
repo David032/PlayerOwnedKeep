@@ -3083,6 +3083,7 @@ GameObject:
   - component: {fileID: -5048864828182140380}
   - component: {fileID: 7950900479706226534}
   - component: {fileID: -2750411237881802650}
+  - component: {fileID: -3437784115081336355}
   m_Layer: 0
   m_Name: SF_Character_Human_Gladiator_Open
   m_TagString: NPC
@@ -3300,6 +3301,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableDebug: 1
   detectionRate: 1
+--- !u!114 &-3437784115081336355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b6f7e497487b748b38a5b2fcffa203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCBehaviourModel: 3
+  PatrollerPoints: []
 --- !u!1 &170836
 GameObject:
   m_ObjectHideFlags: 0

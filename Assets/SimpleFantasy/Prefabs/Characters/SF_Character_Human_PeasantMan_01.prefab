@@ -1109,6 +1109,7 @@ GameObject:
   - component: {fileID: -6469876103538071893}
   - component: {fileID: -194250534551834518}
   - component: {fileID: -5055000569630901792}
+  - component: {fileID: 3465093654316278783}
   m_Layer: 0
   m_Name: SF_Character_Human_PeasantMan_01
   m_TagString: NPC
@@ -1326,6 +1327,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableDebug: 1
   detectionRate: 1
+--- !u!114 &3465093654316278783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b6f7e497487b748b38a5b2fcffa203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCBehaviourModel: 3
+  PatrollerPoints: []
 --- !u!1 &128630
 GameObject:
   m_ObjectHideFlags: 0

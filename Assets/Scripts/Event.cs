@@ -9,6 +9,11 @@ public class Event : MonoBehaviour
     public float weight;
     public bool memorable;
 
+    void Start()
+    {
+        //this.name = EventId;
+    }
+
     public Event() 
     { }
 

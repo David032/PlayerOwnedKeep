@@ -5,11 +5,14 @@ public class Sense : MonoBehaviour
     public float detectionRate = 1.0f;
     protected float elapsedTime = 0.0f;
 
+    protected NPCMentalModel MentalModel;
+
     protected virtual void Initialize() { }
     protected virtual void UpdateSense() { }
 
     void Start()
     {
+        MentalModel = GetComponent<NPCMentalModel>();
         elapsedTime = 0.0f;
         Initialize();
     }

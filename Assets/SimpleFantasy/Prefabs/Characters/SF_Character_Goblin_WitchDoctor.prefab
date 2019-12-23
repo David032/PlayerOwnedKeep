@@ -4756,6 +4756,7 @@ GameObject:
   - component: {fileID: -7835187804154134989}
   - component: {fileID: 2582018057413780230}
   - component: {fileID: -7023979878144278509}
+  - component: {fileID: -5599412902832924848}
   m_Layer: 0
   m_Name: SF_Character_Goblin_WitchDoctor
   m_TagString: NPC
@@ -4973,6 +4974,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableDebug: 1
   detectionRate: 1
+--- !u!114 &-5599412902832924848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b6f7e497487b748b38a5b2fcffa203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCBehaviourModel: 3
+  PatrollerPoints: []
 --- !u!1001 &1239978691207218280
 PrefabInstance:
   m_ObjectHideFlags: 0

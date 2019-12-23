@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class NPCperspective : Sense
 {
-    public int fieldOfView = 45;
-    public int viewDistance = 100;
+    public int fieldOfView = 25;
+    public int viewDistance = 25;
     private Transform playerTransform;
     private Vector3 rayDirection;
+
     protected override void Initialize()
     {
         playerTransform =
@@ -26,13 +27,17 @@ public class NPCperspective : Sense
     {
         RaycastHit hit;
         rayDirection = playerTransform.position - transform.position;
-        if ((Vector3.Angle(rayDirection, transform.forward)) < fieldOfView)
+        Vector3 frontRayPoint = transform.position + (transform.forward * viewDistance);
+        if ((Vector3.Angle(frontRayPoint, transform.forward)) < fieldOfView)
         {
             // Detect if player is within the field of view
-            if (Physics.Raycast(transform.position, rayDirection, out hit,
-            viewDistance))
+            if (Physics.Raycast(transform.position, frontRayPoint, out hit, viewDistance))
             {
-
+                if (hit.collider.GetComponent<EventObject>().EventObjectType == ObjectType.Visual)
+                {
+                    print("Saw an event");
+                    MentalModel.events.Add(hit.collider.GetComponent<EventObject>().LinkedEvent);
+                }
             }
         }
     }

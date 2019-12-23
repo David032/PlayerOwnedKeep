@@ -3127,6 +3127,7 @@ GameObject:
   - component: {fileID: -708473173202870369}
   - component: {fileID: -2243896689802207180}
   - component: {fileID: -7517211185168619908}
+  - component: {fileID: -3927978915187875714}
   m_Layer: 0
   m_Name: SF_Character_Human_Princess
   m_TagString: NPC
@@ -3344,6 +3345,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableDebug: 1
   detectionRate: 1
+--- !u!114 &-3927978915187875714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b6f7e497487b748b38a5b2fcffa203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCBehaviourModel: 3
+  PatrollerPoints: []
 --- !u!1 &162398
 GameObject:
   m_ObjectHideFlags: 0

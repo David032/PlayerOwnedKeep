@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class Event : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string EventId;
+    public List<categories> Categories;
+    public float weight;
+    public bool memorable;
+
+    public Event() 
+    { }
+
+    public Event(string eventDesc, List<categories> eventCategories, float eventWeight, bool unforgetable) 
     {
-        
+        EventId = eventDesc;
+        Categories = eventCategories;
+        weight = eventWeight;
+        memorable = unforgetable;
     }
 
-    // Update is called once per frame
-    void Update()
+    ~Event() 
+    { }
+
+    public void CreateEvent(string eventDesc, List<categories> eventCategories, float eventWeight, bool unforgetable)
     {
-        
+        EventId = eventDesc;
+        Categories = eventCategories;
+        weight = eventWeight;
+        memorable = unforgetable;
     }
 }

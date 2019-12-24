@@ -7,7 +7,6 @@ public class NPCperspective : Sense
     public int fieldOfView = 25;
     public int viewDistance = 25;
     private Transform playerTransform;
-    private Vector3 rayDirection;
 
     protected override void Initialize()
     {
@@ -26,17 +25,17 @@ public class NPCperspective : Sense
     void Detect()
     {
         RaycastHit hit;
-        rayDirection = playerTransform.position - transform.position;
         Vector3 frontRayPoint = transform.position + (transform.forward * viewDistance);
         if ((Vector3.Angle(frontRayPoint, transform.forward)) < fieldOfView)
         {
-            // Detect if player is within the field of view
             if (Physics.Raycast(transform.position, frontRayPoint, out hit, viewDistance))
             {
                 if (hit.collider.GetComponent<EventObject>().EventObjectType == ObjectType.Visual)
                 {
-                    print("Saw an event");
-                    MentalModel.events.Add(hit.collider.GetComponent<EventObject>().LinkedEvent);
+                    if (!MentalModel.events.Contains(hit.collider.GetComponent<EventObject>().LinkedEvent))
+                    {
+                        MentalModel.events.Add(hit.collider.GetComponent<EventObject>().LinkedEvent);
+                    }
                 }
             }
         }

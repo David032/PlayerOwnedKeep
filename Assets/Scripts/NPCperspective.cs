@@ -30,12 +30,23 @@ public class NPCperspective : Sense
         {
             if (Physics.Raycast(transform.position, frontRayPoint, out hit, viewDistance))
             {
-                if (hit.collider.GetComponent<EventObject>().EventObjectType == ObjectType.Visual)
+                if (hit.collider.GetComponent<EventObject>())
                 {
-                    if (!MentalModel.events.Contains(hit.collider.GetComponent<EventObject>().LinkedEvent))
+                    if (hit.collider.GetComponent<EventObject>().EventObjectType == ObjectType.Visual)
                     {
-                        MentalModel.events.Add(hit.collider.GetComponent<EventObject>().LinkedEvent);
+                        if (!MentalModel.events.Contains(hit.collider.GetComponent<EventObject>().LinkedEvent))
+                        {
+                            MentalModel.events.Add(hit.collider.GetComponent<EventObject>().LinkedEvent);
+                        }
                     }
+                    else
+                    {
+                        print("That's not a visual event!");
+                    }
+                }
+                else
+                {
+                    //print("That's not an event @" + gameObject.name);
                 }
             }
         }

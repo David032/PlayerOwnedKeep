@@ -14,8 +14,8 @@ public class EventObject : MonoBehaviour
     public Event LinkedEvent;
     public string EventId;
 
-    private void OnValidate()
-    {
-        EventId = LinkedEvent.EventId;
-    }
+    //private void OnValidate()
+    //{
+    //    EventId = LinkedEvent.EventId;
+    //}
 }

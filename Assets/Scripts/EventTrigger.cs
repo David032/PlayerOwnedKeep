@@ -21,12 +21,18 @@ public class EventTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+
             List<categories> testCategories = new List<categories>();
             testCategories.AddRange(new categories[] { categories.Change });
-            Event TestEvent = Manager.gameObject.AddComponent<Event>();
-            TestEvent.CreateEvent("Someone new arrived", testCategories, 0.75f, true);
-            Manager.Events.Add(TestEvent);
+            Event thisEventEntry = Manager.gameObject.AddComponent<Event>();
+            thisEventEntry.CreateEvent("Someone new arrived", testCategories, 0.75f, true);
+            Manager.Events.Add(thisEventEntry);
             Destroy(this.gameObject.GetComponent<BoxCollider>(), 5f);
+
+            EventObject thisEvent = this.gameObject.AddComponent<EventObject>();
+            thisEvent.EventId = "Someone new arrived";
+            thisEvent.EventObjectType = ObjectType.Visual;
+            thisEvent.LinkedEvent = thisEventEntry;
         }
     }
 }

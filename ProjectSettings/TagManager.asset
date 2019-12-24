@@ -8,6 +8,7 @@ TagManager:
   - InteractExamine
   - InteractThing
   - Chest
+  - EventManager
   layers:
   - Default
   - TransparentFX

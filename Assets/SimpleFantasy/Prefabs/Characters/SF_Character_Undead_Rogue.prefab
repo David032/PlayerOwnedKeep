@@ -2886,6 +2886,8 @@ GameObject:
   - component: {fileID: -5607214433081121721}
   - component: {fileID: 5176747250746121972}
   - component: {fileID: 6748346423356813588}
+  - component: {fileID: -2126235725673790173}
+  - component: {fileID: -671364326387983915}
   m_Layer: 0
   m_Name: SF_Character_Undead_Rogue
   m_TagString: NPC
@@ -3041,8 +3043,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15877e137662f3e48bd2467894a49e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opinionDiskNumber: {fileID: 0}
-  opinionDisk: {fileID: 0}
 --- !u!114 &5021220714781988947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3084,7 +3084,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156564}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.5
@@ -3117,6 +3117,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCBehaviourModel: 3
   PatrollerPoints: []
+--- !u!114 &-2126235725673790173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f73824e08b33964080b043bae41e092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &-671364326387983915
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156564}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &157316
 GameObject:
   m_ObjectHideFlags: 0

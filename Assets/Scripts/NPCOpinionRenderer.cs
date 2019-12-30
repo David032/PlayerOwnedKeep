@@ -5,8 +5,8 @@ using TMPro;
 
 public class NPCOpinionRenderer : MonoBehaviour
 {
-    public TextMeshProUGUI opinionDiskNumber;
-    public SpriteRenderer opinionDisk;
+    TextMeshProUGUI opinionDiskNumber;
+    SpriteRenderer opinionDisk;
 
     Transform playerTransform;
     void Start() 

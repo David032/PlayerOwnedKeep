@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6488569944584568506}
   - component: {fileID: 6488569944584568507}
   - component: {fileID: 6488569944584568508}
+  - component: {fileID: 9050631428251249036}
   m_Layer: 0
   m_Name: Manager
   m_TagString: GameController
@@ -81,6 +82,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayBox: {fileID: 2100000, guid: d11d338e6a849d84f85a289f91b3fa00, type: 2}
   nightBox: {fileID: 2100000, guid: 493bfb50af5d9424da505ba945c86600, type: 2}
+--- !u!114 &9050631428251249036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488569944584568504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016194835e69b5048863bde91ebc6bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumTrustLevel: 0.5
 --- !u!1 &7232960616945857558
 GameObject:
   m_ObjectHideFlags: 0

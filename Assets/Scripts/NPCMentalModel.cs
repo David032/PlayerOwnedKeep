@@ -31,13 +31,8 @@ public class NPCMentalModel : MonoBehaviour
         foreach (Event item in events)
         {
             float testInteractionValue = interactionSystem.calculateValue(this, item);
-
-            if (testInteractionValue != -1)
-            {
-                //print("Value of event: " +item.EventId+ " to NPC: " +gameObject.name+ " is at: " +testInteractionValue);
-            }
         }
 
-        interactionSystem.calculateOpinion(this);
+        opinion = interactionSystem.calculateOpinion(this);
     }
 }

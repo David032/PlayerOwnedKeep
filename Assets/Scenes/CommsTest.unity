@@ -2799,6 +2799,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObservationTestNPC
       objectReference: {fileID: 0}
+    - target: {fileID: 180650, guid: c80d63d739f7231458975214a486d247, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 415286, guid: c80d63d739f7231458975214a486d247, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.94
@@ -4696,6 +4700,10 @@ PrefabInstance:
     - target: {fileID: 139550, guid: cb3ee88ed3236544bbbc13d60a79d21f, type: 3}
       propertyPath: m_Name
       value: GatehouseGuard
+      objectReference: {fileID: 0}
+    - target: {fileID: 139550, guid: cb3ee88ed3236544bbbc13d60a79d21f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 417280, guid: cb3ee88ed3236544bbbc13d60a79d21f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6626,6 +6634,10 @@ PrefabInstance:
     - target: {fileID: 188348, guid: 749b8201967e3724881f34e0606ea09d, type: 3}
       propertyPath: m_Name
       value: GatehouseDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 188348, guid: 749b8201967e3724881f34e0606ea09d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 446584, guid: 749b8201967e3724881f34e0606ea09d, type: 3}
       propertyPath: m_LocalPosition.x

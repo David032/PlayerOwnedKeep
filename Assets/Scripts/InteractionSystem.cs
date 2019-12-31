@@ -5,7 +5,6 @@ using UnityEngine;
 public class InteractionSystem : MonoBehaviour
 {
     public const float MEMORYDECAY = 1000f;
-    // Start is called before the first frame update
 
     public float calculateTrust(NPCMentalModel npcA, NPCMentalModel npcB, float moodA) 
     {
@@ -15,15 +14,11 @@ public class InteractionSystem : MonoBehaviour
         int elementsB = npcB.likes.Capacity + npcB.dislikes.Capacity;
         float mood = moodA;
         float minimumTrust = GameObject.FindGameObjectWithTag("GameController").GetComponent<InteractionSystemController>().minimumTrustLevel;
-        //print("There are " + elementsA + " categories in NPC A(And their mood is at " +mood+", " +
-        //    "and " + elementsB + " categories in NPC B. The minimum trust level is currently at: " + minimumTrust);
-
 
         npcA.likes.Sort();
         npcA.dislikes.Sort();
         npcB.likes.Sort();
         npcB.dislikes.Sort();
-        //print("NPC categories sorted");
 
         foreach (categories item in npcA.likes)
         {
@@ -82,11 +77,11 @@ public class InteractionSystem : MonoBehaviour
 
     public float calculateValue(NPCMentalModel npc, Event eventId) 
     {
-        float fValue;
+        float fValue = -1;
 
         if (npc.eventMemories.Capacity == 0)
         {
-            fValue = -1;
+            fValue = -2;
             return fValue;
         }
 
@@ -97,38 +92,39 @@ public class InteractionSystem : MonoBehaviour
             {
                 thisEventKnowledge = item;
                 fValue = calculateDecay(thisEventKnowledge) * (calculateCommonalities(npc, eventId)) * eventId.weight;
-                item.fValue = fValue;
+                thisEventKnowledge.fValue = fValue;
                 return fValue;
             }
         }
 
-        fValue = -1;
+        fValue = -3;
         return fValue;
     }
 
     public float calculateOpinion(NPCMentalModel npc) 
     {
-        float opinion = 0;
         float sumOfValueFunctions = 0;
+        float opinion = 0;
 
         foreach (NPCEventMemory item in npc.eventMemories)
         {
             sumOfValueFunctions += item.fValue;
         }
-        opinion = Mathf.InverseLerp(-100, 100, sumOfValueFunctions);
+        if (sumOfValueFunctions != 0)
+        {
+            opinion = Mathf.InverseLerp(-100, 100, sumOfValueFunctions);
+        }
+
         return opinion;
     }
 
     public void shareEvent(NPCMentalModel npcA, NPCMentalModel npcB, float mood) 
     {
         float trustVal = calculateTrust(npcA, npcB, mood);
-        print("The trust value between " + npcA.gameObject.name + " and " + npcB.gameObject.name + " is " + trustVal);
         float commChance = Random.Range(0f, 1f);
-        print("The communication chance is " + commChance);
 
-        if (trustVal > commChance)
+        if (trustVal < commChance)
         {
-            print("Communication established!");
             npcA.events.Sort();
             npcB.events.Sort();
 
@@ -142,7 +138,6 @@ public class InteractionSystem : MonoBehaviour
         }
         else
         {
-            print("Communication failed!");
         }
     }
 }

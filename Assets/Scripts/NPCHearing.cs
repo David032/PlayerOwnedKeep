@@ -8,6 +8,7 @@ public class NPCHearing : Sense
     SphereCollider hearingRange;
 
     public bool amInteracting = false;
+    public bool canInteract = true;
     protected override void Initialize()
     {
         hearingRange = GetComponent<SphereCollider>();
@@ -19,25 +20,33 @@ public class NPCHearing : Sense
 
     void OnTriggerEnter(Collider other)
     {
-        if (!amInteracting)
+        if (canInteract)
         {
-            print("Not currently interacting");
-            if (other.gameObject.tag == "NPC")
+            canInteract = false;
+            if (!amInteracting)
             {
-                print("It's an NPC");
-                if (other.gameObject.GetComponent<NPCMentalModel>().events.Capacity != 0)
+                print("Not currently interacting");
+                if (other.gameObject.tag == "NPC")
                 {
-                    print("Their memory isn't 0");
-                    amInteracting = true;
-                    GetComponent<InteractionSystem>().shareEvent(MentalModel, other.GetComponent<NPCMentalModel>(), MentalModel.mood);                 
-                    amInteracting = false;
+                    print("It's an NPC");
+                    if (other.gameObject.GetComponent<NPCMentalModel>().events.Capacity != 0)
+                    {
+                        print("Their memory isn't 0");
+                        amInteracting = true;
+                        GetComponent<InteractionSystem>().shareEvent(MentalModel, other.GetComponent<NPCMentalModel>(), MentalModel.mood);                 
+                        amInteracting = false;
+                    }
                 }
-
             }
+            StartCoroutine(resetInteraction());
         }
     }
 
-
+    IEnumerator resetInteraction() 
+    {
+        yield return new WaitForSeconds(2f);
+        canInteract = true;
+    }
 }
 
 

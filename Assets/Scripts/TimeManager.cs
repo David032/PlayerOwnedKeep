@@ -121,4 +121,10 @@ public class TimeManager : MonoBehaviour
             timePassage = Passage.PM;
         }
     }
+
+    public float getRawTime() 
+    {
+        float rawTime = timer + (days * 600);
+        return rawTime;
+    }
 }

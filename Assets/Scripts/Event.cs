@@ -9,9 +9,7 @@ public class Event : MonoBehaviour
     public float weight;
     public bool memorable;
 
-    int dayLearnt;
-    int hourLearnt;
-    int minuteLearnt;
+    public NPCEventMemory EventMemory;
 
     void Start()
     {

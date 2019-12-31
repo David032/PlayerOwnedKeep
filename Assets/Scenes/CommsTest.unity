@@ -2955,12 +2955,12 @@ PrefabInstance:
     - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
         type: 3}
       propertyPath: likes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
         type: 3}
       propertyPath: dislikes.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
         type: 3}
@@ -2976,6 +2976,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dislikes.Array.data[0]
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
+        type: 3}
+      propertyPath: likes.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
+        type: 3}
+      propertyPath: dislikes.Array.data[1]
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 115122, guid: feee25723b3093a4f85ff5bd82d38dec, type: 3}
       propertyPath: m_Name
@@ -4376,9 +4386,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventId: Test Event
-  Categories: 000000000a000000
+  Categories: 070000000c0000000f000000
   weight: 0.875
   memorable: 0
+  EventMemory: {fileID: 0}
 --- !u!1001 &1291885237
 PrefabInstance:
   m_ObjectHideFlags: 0

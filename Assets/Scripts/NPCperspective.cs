@@ -36,7 +36,10 @@ public class NPCperspective : Sense
                     {
                         if (!MentalModel.events.Contains(hit.collider.GetComponent<EventObject>().LinkedEvent))
                         {
-                            MentalModel.events.Add(hit.collider.GetComponent<EventObject>().LinkedEvent);
+                            Event eventBeingAdded = hit.collider.GetComponent<EventObject>().LinkedEvent;
+                            MentalModel.events.Add(eventBeingAdded);
+
+                            MentalModel.eventMemories.Add(new NPCEventMemory(hit.collider.GetComponent<EventObject>().LinkedEvent));
                         }
                     }
                     else

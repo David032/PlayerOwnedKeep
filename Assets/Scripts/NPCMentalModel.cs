@@ -12,6 +12,9 @@ public class NPCMentalModel : MonoBehaviour
     public List<NPCEventMemory> eventMemories;
     public float opinion = 0;
 
+    [Range(0,1)]
+    public float mood = 1;
+
     NPCOpinionRenderer opinionRenderer;
     InteractionSystem interactionSystem;
 
@@ -31,8 +34,10 @@ public class NPCMentalModel : MonoBehaviour
 
             if (testInteractionValue != -1)
             {
-                print("Value of event: " +item.EventId+ " to NPC: " +gameObject.name+ " is at: " +testInteractionValue);
+                //print("Value of event: " +item.EventId+ " to NPC: " +gameObject.name+ " is at: " +testInteractionValue);
             }
         }
+
+        interactionSystem.calculateOpinion(this);
     }
 }

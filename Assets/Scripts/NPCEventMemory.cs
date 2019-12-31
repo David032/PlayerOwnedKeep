@@ -7,6 +7,8 @@ public class NPCEventMemory : ScriptableObject
     public Event learntEvent;
     public float learntTime;
     public string learntEventName;
+    public float fValue;
+
 
     public NPCEventMemory(Event eventToAdd) 
     {

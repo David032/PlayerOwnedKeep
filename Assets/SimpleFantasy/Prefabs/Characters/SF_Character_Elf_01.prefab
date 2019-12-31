@@ -1552,9 +1552,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   likes: 
   dislikes: 
-  events: []
+  events:
+  - {fileID: 0}
   unforgettableEvents: []
+  eventMemories: []
   opinion: 0
+  mood: 1
 --- !u!114 &4660640613601122412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1598,6 +1601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableDebug: 1
   detectionRate: 1
+  amInteracting: 0
 --- !u!114 &-7867449570140715585
 MonoBehaviour:
   m_ObjectHideFlags: 0

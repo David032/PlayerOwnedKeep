@@ -39,7 +39,6 @@ public class InteractionSystem : MonoBehaviour
                 commonDislikes += 1;
             }
         }
-        //print("These NPCs have " + commonLikes + " common likes, and " + commonDislikes + " common dislikes.");
 
         int commonalities = commonLikes + commonDislikes;
         int elements = elementsA + elementsB;
@@ -69,7 +68,6 @@ public class InteractionSystem : MonoBehaviour
         }
 
         int commonalities = likesInEvent - dislikesInEvent;
-        print("Commonalities value: " + commonalities);
         return commonalities;
     }
 
@@ -79,7 +77,6 @@ public class InteractionSystem : MonoBehaviour
 
         float decayTime = 1 - (currentTime - eventMemory.learntTime) / MEMORYDECAY;
 
-        print("Decay time: " + decayTime);
         return decayTime;
     }
 
@@ -100,11 +97,52 @@ public class InteractionSystem : MonoBehaviour
             {
                 thisEventKnowledge = item;
                 fValue = calculateDecay(thisEventKnowledge) * (calculateCommonalities(npc, eventId)) * eventId.weight;
+                item.fValue = fValue;
                 return fValue;
             }
         }
 
         fValue = -1;
         return fValue;
+    }
+
+    public float calculateOpinion(NPCMentalModel npc) 
+    {
+        float opinion = 0;
+        float sumOfValueFunctions = 0;
+
+        foreach (NPCEventMemory item in npc.eventMemories)
+        {
+            sumOfValueFunctions += item.fValue;
+        }
+        opinion = Mathf.InverseLerp(-100, 100, sumOfValueFunctions);
+        return opinion;
+    }
+
+    public void shareEvent(NPCMentalModel npcA, NPCMentalModel npcB, float mood) 
+    {
+        float trustVal = calculateTrust(npcA, npcB, mood);
+        print("The trust value between " + npcA.gameObject.name + " and " + npcB.gameObject.name + " is " + trustVal);
+        float commChance = Random.Range(0f, 1f);
+        print("The communication chance is " + commChance);
+
+        if (trustVal > commChance)
+        {
+            print("Communication established!");
+            npcA.events.Sort();
+            npcB.events.Sort();
+
+            Event eventToShare = npcA.events[Random.Range(0, npcA.events.Capacity)];
+
+            if (!npcB.events.Contains(eventToShare))
+            {
+                npcB.events.Add(eventToShare);
+                npcB.eventMemories.Add(new NPCEventMemory(eventToShare));
+            }      
+        }
+        else
+        {
+            print("Communication failed!");
+        }
     }
 }

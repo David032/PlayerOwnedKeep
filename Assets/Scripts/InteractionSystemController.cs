@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractionSystemController : MonoBehaviour
 {
     public float minimumTrustLevel = 0.5f;
+    public GameObject dialogueObject;
 
     // Start is called before the first frame update
     void Start()

@@ -2,34 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class DialogueInstance : MonoBehaviour
 {
     public GameObject button;
     public GameObject leftWindow;
+    public TextMeshProUGUI leftText;
     public GameObject rightWindow;
-    public TextMeshPro dialogueText;
+    public TextMeshProUGUI rightText;
+    public TextMeshProUGUI dialogueText;
 
-    public void NewDialogueInstance(bool left, bool right, string text) 
+    public void Awake()
     {
-        dialogueText.text = text;
-        if (left)
-        {
-            leftWindow.SetActive(true);
-            rightWindow.SetActive(false);
-        }
-        if (right)
-        {
-            leftWindow.SetActive(false);
-            rightWindow.SetActive(true);
-        }
+        
     }
 
-    //Maybe don't use this one yet?
-    void NewDialogueInstance(bool left, bool right, Material leftMat, Material rightMat, string text) 
+    public void NewDialogueInstance(bool left, bool right, string text, GameObject caller) 
     {
         dialogueText.text = text;
-
         if (left)
         {
             leftWindow.SetActive(true);
@@ -40,6 +31,9 @@ public class DialogueInstance : MonoBehaviour
             leftWindow.SetActive(false);
             rightWindow.SetActive(true);
         }
+
+        leftText.text = caller.name;
+        rightText.text = caller.name;
     }
 
     public void EndDialogue() 

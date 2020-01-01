@@ -18,7 +18,8 @@ public class NPCDialogueCore : MonoBehaviour
     public bool canTalk()
     {
         float distanceBetween = Vector3.Distance(player.transform.position, transform.position);
-        if (distanceBetween > 0.75f)
+        print(distanceBetween);
+        if (distanceBetween < 2.75f)
         {
             return true;
         }

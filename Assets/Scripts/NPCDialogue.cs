@@ -2,12 +2,11 @@
 
 public class NPCDialogue : NPCDialogueCore
 {
-    public string iD;
-    public string windowText = "";
-    public bool displayLeft = true;
-    public bool displayRight = false;
+    public bool oneShot = false;
+    public string dialogue = "";
 
     GameObject spawnedDialogue;
+    
 
     void Start() 
     {
@@ -16,21 +15,17 @@ public class NPCDialogue : NPCDialogueCore
 
     void Update() 
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Destroy(spawnedDialogue);
-            spawnedDialogue = null;          
-        }
+
     }
 
     void OnMouseDown() 
     {
-        if (canTalk())
+        if (canTalk() & oneShot)
         {
-            GameObject DialogueWindow = Instantiate(dialogueWindow, dialogueSpot.transform.position, dialogueSpot.transform.rotation, dialogueSpot.transform); ;
-            DialogueWindow.name = this.gameObject.ToString() + " Dialogue";
-            DialogueWindow.GetComponent<DialogueInstance>().NewDialogueInstance(displayLeft, displayRight, windowText);
-            spawnedDialogue = DialogueWindow;
+            print("DEBUG: CAN TALK!");
+            spawnedDialogue = Instantiate(dialogueWindow, dialogueSpot.transform);
+            spawnedDialogue.GetComponent<RectTransform>().localPosition.Set(0, 0, 0);
+            spawnedDialogue.GetComponent<DialogueInstance>().NewDialogueInstance(true, false,dialogue,this.gameObject);
         }
     }
 }

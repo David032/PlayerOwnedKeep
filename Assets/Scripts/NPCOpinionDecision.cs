@@ -9,7 +9,7 @@ public enum Type
 public class NPCOpinionDecision : MonoBehaviour
 {
     NPCMentalModel mentalModel;
-    Type decisionType = Type.Blocker;
+    public Type decisionType = Type.Blocker;
 
     public GameObject BlockerObject;
 

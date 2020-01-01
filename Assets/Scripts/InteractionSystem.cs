@@ -123,6 +123,8 @@ public class InteractionSystem : MonoBehaviour
         float trustVal = calculateTrust(npcA, npcB, mood);
         float commChance = Random.Range(0f, 1f);
 
+        print("Attempted to communicate between: " + npcA.gameObject + " and " + npcB.gameObject);
+
         if (trustVal < commChance)
         {
             npcA.events.Sort();

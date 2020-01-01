@@ -22,30 +22,20 @@ public class NPCHearing : Sense
     {
         if (canInteract)
         {
-            canInteract = false;
+            canInteract = true;
             if (!amInteracting)
             {
-                print("Not currently interacting");
                 if (other.gameObject.tag == "NPC")
                 {
-                    print("It's an NPC");
                     if (other.gameObject.GetComponent<NPCMentalModel>().events.Capacity != 0)
                     {
-                        print("Their memory isn't 0");
                         amInteracting = true;
-                        GetComponent<InteractionSystem>().shareEvent(MentalModel, other.GetComponent<NPCMentalModel>(), MentalModel.mood);                 
+                        GetComponent<InteractionSystem>().shareEvent(MentalModel, other.GetComponent<NPCMentalModel>(), MentalModel.mood);
                         amInteracting = false;
                     }
                 }
             }
-            StartCoroutine(resetInteraction());
         }
-    }
-
-    IEnumerator resetInteraction() 
-    {
-        yield return new WaitForSeconds(2f);
-        canInteract = true;
     }
 }
 

@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimumTrustLevel: 0.5
+  dialogueObject: {fileID: 153772, guid: 259f3f16fb70b354491dabb97cee2a27, type: 3}
 --- !u!1 &7232960616945857558
 GameObject:
   m_ObjectHideFlags: 0

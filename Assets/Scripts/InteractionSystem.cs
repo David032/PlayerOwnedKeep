@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class InteractionSystem : MonoBehaviour
 {
-    public const float MEMORYDECAY = 1000f;
+    InteractionSystemController controller;
+
+    void Start()
+    {
+        controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<InteractionSystemController>();
+    }
 
     public float calculateTrust(NPCMentalModel npcA, NPCMentalModel npcB, float moodA) 
     {
@@ -13,7 +18,7 @@ public class InteractionSystem : MonoBehaviour
         int elementsA = npcA.likes.Capacity + npcA.dislikes.Capacity;
         int elementsB = npcB.likes.Capacity + npcB.dislikes.Capacity;
         float mood = moodA;
-        float minimumTrust = GameObject.FindGameObjectWithTag("GameController").GetComponent<InteractionSystemController>().minimumTrustLevel;
+        float minimumTrust = controller.minimumTrustLevel;
 
         npcA.likes.Sort();
         npcA.dislikes.Sort();
@@ -70,7 +75,7 @@ public class InteractionSystem : MonoBehaviour
     {
         float currentTime = GameObject.FindGameObjectWithTag("GameController").GetComponent<TimeManager>().getRawTime();
 
-        float decayTime = 1 - (currentTime - eventMemory.learntTime) / MEMORYDECAY;
+        float decayTime = 1 - (currentTime - eventMemory.learntTime) / controller.MEMORYDECAY;
 
         return decayTime;
     }

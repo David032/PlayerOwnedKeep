@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractionSystemController : MonoBehaviour
+public class DialogueInstanceUtil : MonoBehaviour
 {
-    public float minimumTrustLevel = 0.5f;
-    public float MEMORYDECAY = 1000f;
-    public GameObject dialogueObject;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +14,16 @@ public class InteractionSystemController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void Awake()
+    {
+        StartCoroutine(destroyMe());
+    }
+
+    IEnumerator destroyMe() 
+    {
+        yield return new WaitForSeconds(6f);
+        Destroy(this.gameObject);
     }
 }

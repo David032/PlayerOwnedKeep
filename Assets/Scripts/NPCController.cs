@@ -7,6 +7,7 @@ public class NPCController : MonoBehaviour
 {
     NavMeshAgent agent;
     Animator anim;
+    Rigidbody rb;
 
     void Start()
     {
@@ -15,7 +16,20 @@ public class NPCController : MonoBehaviour
 
         anim.SetInteger("WeaponType_int", 0);
         anim.SetInteger("MeleeType_int", 0);
-        anim.SetInteger("Animation_int", 1);
+        //
+    }
 
+    private void Update()
+    {
+        if (agent.velocity != Vector3.zero)
+        {
+            anim.SetInteger("Animation_int", 0);
+            anim.SetFloat("Speed_f", agent.speed);
+        }
+        else
+        {
+            anim.SetFloat("Speed_f", 0);
+            anim.SetInteger("Animation_int", 1);
+        }
     }
 }

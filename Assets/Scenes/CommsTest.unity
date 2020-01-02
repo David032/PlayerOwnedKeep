@@ -5749,7 +5749,40 @@ MonoBehaviour:
     type: 3}
   dialogueSpot: {fileID: 1384701939}
   oneShot: 1
-  dialogue: It worked!
+  dialogue: No Entry!
+--- !u!114 &1617935868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617935851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716819c21d0fcde45abd660582a4d5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueWindow: {fileID: 3060259779477117230, guid: f88c348ce53d4294fb2d5947e3ab498b,
+    type: 3}
+  dialogueSpot: {fileID: 1384701939}
+  oneShot: 1
+  dialogue: Yes Entry!
+--- !u!114 &1617935869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617935851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa91d68d77ccc9e4ca228b3f769540f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueOptions:
+  - {fileID: 1617935861}
+  - {fileID: 1617935861}
+  HowManyOptions: 0
 --- !u!1001 &1626973800
 PrefabInstance:
   m_ObjectHideFlags: 0

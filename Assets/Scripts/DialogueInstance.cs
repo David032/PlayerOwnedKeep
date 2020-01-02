@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System;
 
@@ -34,6 +35,8 @@ public class DialogueInstance : MonoBehaviour
 
         leftText.text = caller.name;
         rightText.text = caller.name;
+
+        button.GetComponent<Button>().onClick.AddListener(EndDialogue);
     }
 
     public void EndDialogue() 

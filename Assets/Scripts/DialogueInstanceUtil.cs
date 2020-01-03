@@ -23,7 +23,7 @@ public class DialogueInstanceUtil : MonoBehaviour
 
     IEnumerator destroyMe() 
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
         Destroy(this.gameObject);
     }
 }

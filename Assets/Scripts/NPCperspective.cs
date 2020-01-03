@@ -57,12 +57,6 @@ public class NPCperspective : Sense
 
     void OnDrawGizmos()
     {
-        if (playerTransform == null)
-        {
-            return;
-        }
-        Debug.DrawLine(transform.position, playerTransform.position,
-        Color.red);
         Vector3 frontRayPoint = transform.position + (transform.forward *
         viewDistance);
         //Approximate perspective visualization

@@ -28,4 +28,9 @@ public class NPCDialogue : NPCDialogueCore
             spawnedDialogue.GetComponent<DialogueInstance>().NewDialogueInstance(true, false,dialogue,this.gameObject);
         }
     }
+
+    private void OnValidate()
+    {
+        //this.name = dialogue;
+    }
 }

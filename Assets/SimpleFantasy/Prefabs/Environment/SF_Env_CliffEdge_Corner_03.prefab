@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 442646}
   - component: {fileID: 3317192}
   - component: {fileID: 2394334}
+  - component: {fileID: -7498221971259652463}
+  - component: {fileID: 3827850201968393178}
   m_Layer: 0
   m_Name: SF_Env_CliffEdge_Corner_03
   m_TagString: Untagged
@@ -54,6 +56,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -78,3 +81,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-7498221971259652463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.748204, y: 5.81722, z: 14.975483}
+  m_Center: {x: -7.6259437, y: -2.90861, z: -4.9877415}
+--- !u!65 &3827850201968393178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154686}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.2054234, y: 5.81722, z: 6.9782963}
+  m_Center: {x: -2.6027117, y: -2.90861, z: -0.98914814}

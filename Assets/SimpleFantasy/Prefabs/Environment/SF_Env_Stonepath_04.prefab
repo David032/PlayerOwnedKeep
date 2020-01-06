@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 405506}
   - component: {fileID: 3376924}
   - component: {fileID: 2338744}
+  - component: {fileID: 3347915450397562144}
   m_Layer: 0
   m_Name: SF_Env_Stonepath_04
   m_TagString: Untagged
@@ -54,6 +55,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -78,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3347915450397562144
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2266388, y: 0, z: 0.790329}
+  m_Center: {x: 0, y: 0.016582664, z: 0}

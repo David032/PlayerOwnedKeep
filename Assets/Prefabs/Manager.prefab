@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6488569944584568507}
   - component: {fileID: 6488569944584568508}
   - component: {fileID: 9050631428251249036}
+  - component: {fileID: 144554029891098364}
   m_Layer: 0
   m_Name: Manager
   m_TagString: GameController
@@ -95,7 +96,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimumTrustLevel: 0.5
+  MEMORYDECAY: 1000
   dialogueObject: {fileID: 153772, guid: 259f3f16fb70b354491dabb97cee2a27, type: 3}
+--- !u!114 &144554029891098364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488569944584568504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7892051d9524fbe4e9b89777e21f473b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueWindow: {fileID: 3060259779477117230, guid: f88c348ce53d4294fb2d5947e3ab498b,
+    type: 3}
 --- !u!1 &7232960616945857558
 GameObject:
   m_ObjectHideFlags: 0

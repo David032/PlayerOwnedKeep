@@ -4830,15 +4830,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8abcc2ccd8d0543975eb5e6af9c305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueWindow: {fileID: 3060259779477117230, guid: f88c348ce53d4294fb2d5947e3ab498b,
-    type: 3}
-  dialogueSpot: {fileID: 1384701939}
-  message: You set about cleaning the stables
-  accessRange: 12.5
   EventName: They cleaned out the stables for me
   EventCategories: 070000000c000000
   IsEventUnforgetabble: 0
   EventWeight: 0.75
+  message: You set about cleaning the stables
+  accessRange: 12.5
 --- !u!65 &1370743320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7031,6 +7028,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabb106c1d67dc240ac9157040c34dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EventName: Someone new arrived in town
+  EventCategories: 0e00000004000000
+  IsEventUnforgetabble: 1
+  EventWeight: 0.875
 --- !u!65 &2121268893
 BoxCollider:
   m_ObjectHideFlags: 0

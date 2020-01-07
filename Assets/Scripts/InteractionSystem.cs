@@ -128,22 +128,12 @@ public class InteractionSystem : MonoBehaviour
         float trustVal = calculateTrust(npcA, npcB, mood);
         float commChance = Random.Range(0f, 1f);
 
-        print("Attempted to communicate between: " + npcA.gameObject + " and " + npcB.gameObject + ". The trust value was: " +trustVal+ " and the chance was " +commChance);
-
         if (trustVal < commChance)
         {
-            print("Communication successful");
-            //npcA.events.Sort();
-            //npcB.events.Sort();
-
-
-            print(npcA.events.Capacity);
             Event eventToShare = npcA.events[Random.Range(0, (npcA.events.Capacity))];
-            print(eventToShare);
 
             if (!npcB.events.Contains(eventToShare))
             {
-                print(npcA + " shared knowledge of " + eventToShare + " with " + npcB);
                 npcB.events.Add(eventToShare);
                 npcB.eventMemories.Add(new NPCEventMemory(eventToShare));
                 Instantiate(controller.dialogueObject,npcB.transform);

@@ -13,8 +13,8 @@ NavMeshProjectSettings:
     cost: 4
   - name: Main Path
     cost: 1
-  - name: 
-    cost: 1
+  - name: Wilderness
+    cost: 3
   - name: 
     cost: 1
   - name: 

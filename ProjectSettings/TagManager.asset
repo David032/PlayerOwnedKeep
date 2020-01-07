@@ -9,6 +9,7 @@ TagManager:
   - InteractThing
   - Chest
   - EventManager
+  - dialogueSpot
   layers:
   - Default
   - TransparentFX

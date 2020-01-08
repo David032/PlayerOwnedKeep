@@ -3071,6 +3071,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8895106423341447401, guid: feee25723b3093a4f85ff5bd82d38dec,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
         type: 3}
       propertyPath: likes.Array.size

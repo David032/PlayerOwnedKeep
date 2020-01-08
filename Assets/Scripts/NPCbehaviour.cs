@@ -29,6 +29,10 @@ public class NPCbehaviour : MonoBehaviour
         {
             GotoNextPoint();
         }
+        if (NPCBehaviourModel == Behaviour.Wanderer)
+        {
+            gameObject.AddComponent<RandomWalk>(); //Note: This is taken from Unity->NavMeshComponent examples
+        }
     }
 
     // Update is called once per frame

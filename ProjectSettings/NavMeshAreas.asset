@@ -15,9 +15,9 @@ NavMeshProjectSettings:
     cost: 1
   - name: Wilderness
     cost: 3
-  - name: 
-    cost: 1
-  - name: 
+  - name: Pass-Dangerous
+    cost: 5
+  - name: Pass-Safe
     cost: 1
   - name: 
     cost: 1

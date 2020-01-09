@@ -18,6 +18,10 @@ public class NPCMentalModel : MonoBehaviour
     NPCOpinionRenderer opinionRenderer;
     InteractionSystem interactionSystem;
 
+    int defaultLikes = 3;
+    int defaultDislikes = 1;
+    int currentCategories = 16;
+
     void Start() 
     {
         opinionRenderer = GetComponent<NPCOpinionRenderer>();
@@ -34,5 +38,26 @@ public class NPCMentalModel : MonoBehaviour
         }
 
         opinion = interactionSystem.calculateOpinion(this);
+    } 
+    void CreateCategories() 
+    {
+        if (likes.Capacity == 0)
+        {
+            for (int i = 0; i < defaultLikes; i++)
+            {
+                int randomSelection = Random.Range(0, currentCategories);
+                likes.Add((categories)randomSelection);
+            }
+        }
+        if (dislikes.Capacity == 0)
+        {
+            for (int i = 0; i < defaultDislikes; i++)
+            {
+                int randomSelection = Random.Range(0, currentCategories);
+                dislikes.Add((categories)randomSelection);
+            }
+        }
     }
 }
+
+

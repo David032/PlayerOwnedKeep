@@ -26,6 +26,8 @@ public class NPCperspective : Sense
     {
         RaycastHit hit;
         Vector3 frontRayPoint = transform.position + (transform.forward * viewDistance);
+
+
         if ((Vector3.Angle(frontRayPoint, transform.forward)) < fieldOfView)
         {
             if (Physics.Raycast(transform.position, frontRayPoint, out hit, viewDistance))

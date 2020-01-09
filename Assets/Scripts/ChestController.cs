@@ -12,6 +12,16 @@ public class ChestController : MonoBehaviour
     bool isBeingExamined = false;
 
     //This is barely working :(
+
+    private void Start()
+    {
+        
+    }
+
+    private void Update()
+    {
+        
+    }
     void OnMouseDown() 
     {
         if (!isBeingExamined)

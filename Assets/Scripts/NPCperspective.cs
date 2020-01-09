@@ -27,32 +27,29 @@ public class NPCperspective : Sense
         RaycastHit hit;
         Vector3 frontRayPoint = transform.position + (transform.forward * viewDistance);
 
-
-        if ((Vector3.Angle(frontRayPoint, transform.forward)) < fieldOfView)
+        if (Physics.Raycast(transform.position, frontRayPoint, out hit, viewDistance))
         {
-            if (Physics.Raycast(transform.position, frontRayPoint, out hit, viewDistance))
+            if (hit.collider.GetComponent<EventObject>())
             {
-                if (hit.collider.GetComponent<EventObject>())
+                Debug.DrawLine(transform.position, hit.transform.position);
+                if (hit.collider.GetComponent<EventObject>().EventObjectType == ObjectType.Visual)
                 {
-                    if (hit.collider.GetComponent<EventObject>().EventObjectType == ObjectType.Visual)
+                    if (!MentalModel.events.Contains(hit.collider.GetComponent<EventObject>().LinkedEvent))
                     {
-                        if (!MentalModel.events.Contains(hit.collider.GetComponent<EventObject>().LinkedEvent))
-                        {
-                            Event eventBeingAdded = hit.collider.GetComponent<EventObject>().LinkedEvent;
-                            MentalModel.events.Add(eventBeingAdded);
+                        Event eventBeingAdded = hit.collider.GetComponent<EventObject>().LinkedEvent;
+                        MentalModel.events.Add(eventBeingAdded);
 
-                            MentalModel.eventMemories.Add(new NPCEventMemory(hit.collider.GetComponent<EventObject>().LinkedEvent));
-                        }
-                    }
-                    else
-                    {
-                        print("That's not a visual event!");
+                        MentalModel.eventMemories.Add(new NPCEventMemory(hit.collider.GetComponent<EventObject>().LinkedEvent));
                     }
                 }
                 else
                 {
-                    //print("That's not an event @" + gameObject.name);
+                    print("That's not a visual event!");
                 }
+            }
+            else
+            {
+                //print("That's not an event @" + gameObject.name);
             }
         }
     }
@@ -61,13 +58,6 @@ public class NPCperspective : Sense
     {
         Vector3 frontRayPoint = transform.position + (transform.forward *
         viewDistance);
-        //Approximate perspective visualization
-        Vector3 leftRayPoint = frontRayPoint;
-        leftRayPoint.x += fieldOfView * 0.5f;
-        Vector3 rightRayPoint = frontRayPoint;
-        rightRayPoint.x -= fieldOfView * 0.5f;
         Debug.DrawLine(transform.position, frontRayPoint, Color.green);
-        Debug.DrawLine(transform.position, leftRayPoint, Color.green);
-        Debug.DrawLine(transform.position, rightRayPoint, Color.green);
     }
 }

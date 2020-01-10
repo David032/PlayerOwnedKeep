@@ -25,6 +25,11 @@ public class NPCbehaviour : MonoBehaviour
     float TravellerTimeAtPlace;
     float DesiredTimeAtPlace = 30f;
 
+    public Transform[] WandererPoints;
+    int WandererDestinationPoints = 0;
+    float WandererTimeAtPlace;
+    float DesiredTimeAtWanderedPlace = 15f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,8 +43,7 @@ public class NPCbehaviour : MonoBehaviour
             case Behaviour.Trader:
                 break;
             case Behaviour.Wanderer:
-                gameObject.AddComponent<NPCWandererBehaviour>(); //Note: This is taken from Unity->NavMeshComponent examples
-                GetComponent<NPCWandererBehaviour>().NavmeshMask = 31;
+                WanderSomewhere();
                 break;
             case Behaviour.Guard:
                 break;
@@ -64,11 +68,23 @@ public class NPCbehaviour : MonoBehaviour
                     {
                         TravelToNextPoint();
                     }
+                    else if (TravellerTimeAtPlace < DesiredTimeAtPlace)
+                    {
+                        //Have him wander inbetween here?
+                    }
                 }
                 break;
             case Behaviour.Trader:
                 break;
             case Behaviour.Wanderer:
+                if (!agent.pathPending && agent.remainingDistance < 2.5f)
+                {
+                    WandererTimeAtPlace += Time.deltaTime;
+                    if (WandererTimeAtPlace > DesiredTimeAtWanderedPlace)
+                    {
+                        WanderSomewhere();
+                    }
+                }
                 break;
             case Behaviour.Guard:
                 //There's no behaviour here intentionally
@@ -99,5 +115,15 @@ public class NPCbehaviour : MonoBehaviour
         }
         agent.destination = TravellerPoints[TravellerDestPoint].position;
         TravellerDestPoint = (TravellerDestPoint + 1) % TravellerPoints.Length;
+    }
+
+    void WanderSomewhere() 
+    {
+        WandererTimeAtPlace = 0;
+        if (WandererPoints.Length == 0)
+        {
+            return;
+        }
+        agent.destination = WandererPoints[Random.Range(0, WandererPoints.Length)].position;
     }
 }

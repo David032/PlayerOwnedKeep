@@ -26,6 +26,7 @@ public class NPCMentalModel : MonoBehaviour
     {
         opinionRenderer = GetComponent<NPCOpinionRenderer>();
         interactionSystem = GetComponent<InteractionSystem>();
+        CreateCategories();
     }
 
     void Update() 

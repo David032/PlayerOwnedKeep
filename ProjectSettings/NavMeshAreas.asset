@@ -19,7 +19,7 @@ NavMeshProjectSettings:
     cost: 5
   - name: Pass-Safe
     cost: 1
-  - name: 
+  - name: Area 1
     cost: 1
   - name: 
     cost: 1

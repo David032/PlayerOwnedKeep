@@ -38,7 +38,8 @@ public class NPCbehaviour : MonoBehaviour
             case Behaviour.Trader:
                 break;
             case Behaviour.Wanderer:
-                gameObject.AddComponent<RandomWalk>(); //Note: This is taken from Unity->NavMeshComponent examples
+                gameObject.AddComponent<NPCWandererBehaviour>(); //Note: This is taken from Unity->NavMeshComponent examples
+                GetComponent<NPCWandererBehaviour>().NavmeshMask = 31;
                 break;
             case Behaviour.Guard:
                 break;

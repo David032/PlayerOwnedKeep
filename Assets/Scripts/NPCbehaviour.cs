@@ -20,18 +20,33 @@ public class NPCbehaviour : MonoBehaviour
     public Transform[] PatrollerPoints;
     private int PatrollerDestPoint = 0;
 
+    public Transform[] TravellerPoints;
+    int TravellerDestPoint = 0;
+    float TravellerTimeAtPlace;
+    float DesiredTimeAtPlace = 30f;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
 
-        if (NPCBehaviourModel == Behaviour.Patroller)
+        switch (NPCBehaviourModel)
         {
-            GotoNextPoint();
-        }
-        if (NPCBehaviourModel == Behaviour.Wanderer)
-        {
-            gameObject.AddComponent<RandomWalk>(); //Note: This is taken from Unity->NavMeshComponent examples
+            case Behaviour.Traveller:
+                TravelToNextPoint();
+                break;
+            case Behaviour.Trader:
+                break;
+            case Behaviour.Wanderer:
+                gameObject.AddComponent<RandomWalk>(); //Note: This is taken from Unity->NavMeshComponent examples
+                break;
+            case Behaviour.Guard:
+                break;
+            case Behaviour.Patroller:
+                GotoNextPoint();
+                break;
+            default:
+                break;
         }
     }
 
@@ -41,6 +56,14 @@ public class NPCbehaviour : MonoBehaviour
         switch (NPCBehaviourModel)
         {
             case Behaviour.Traveller:
+                if (!agent.pathPending && agent.remainingDistance < 0.5f)
+                {
+                    TravellerTimeAtPlace += Time.deltaTime;
+                    if (TravellerTimeAtPlace > DesiredTimeAtPlace)
+                    {
+                        TravelToNextPoint();
+                    }
+                }
                 break;
             case Behaviour.Trader:
                 break;
@@ -64,5 +87,16 @@ public class NPCbehaviour : MonoBehaviour
             return;
         agent.destination = PatrollerPoints[PatrollerDestPoint].position;
         PatrollerDestPoint = (PatrollerDestPoint + 1) % PatrollerPoints.Length;
+    }
+
+    void TravelToNextPoint() 
+    {
+        TravellerTimeAtPlace = 0;
+        if (TravellerPoints.Length == 0)
+        {
+            return;
+        }
+        agent.destination = TravellerPoints[TravellerDestPoint].position;
+        TravellerDestPoint = (TravellerDestPoint + 1) % TravellerPoints.Length;
     }
 }

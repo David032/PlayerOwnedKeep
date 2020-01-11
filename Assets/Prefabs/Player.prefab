@@ -928,7 +928,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &1105126117292703610
 CapsuleCollider:
@@ -1111,6 +1111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9211e0b4c110994f926a043d1f0e75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inventory: []
 --- !u!1 &1105126117292771313
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,15 +15,15 @@ public enum Behaviour
 public class NPCbehaviour : MonoBehaviour
 {
     public Behaviour NPCBehaviourModel = Behaviour.Guard;
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     public Transform[] PatrollerPoints;
     private int PatrollerDestPoint = 0;
 
     public Transform[] TravellerPoints;
-    int TravellerDestPoint = 0;
-    float TravellerTimeAtPlace;
-    float DesiredTimeAtPlace = 30f;
+    public int TravellerDestPoint = 0;
+    public float TravellerTimeAtPlace;
+    public float DesiredTimeAtPlace = 30f;
 
     public Transform[] WandererPoints;
     int WandererDestinationPoints = 0;
@@ -58,25 +58,23 @@ public class NPCbehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawLine(transform.position, agent.destination);
+
         switch (NPCBehaviourModel)
         {
             case Behaviour.Traveller:
-                if (agent.isOnNavMesh)
+                if (!agent.pathPending && agent.remainingDistance < 0.5f)
                 {
-                    if (!agent.pathPending && agent.remainingDistance < 0.5f)
+                    TravellerTimeAtPlace += Time.deltaTime;
+                    if (TravellerTimeAtPlace > DesiredTimeAtPlace)
                     {
-                        TravellerTimeAtPlace += Time.deltaTime;
-                        if (TravellerTimeAtPlace > DesiredTimeAtPlace)
-                        {
-                            TravelToNextPoint();
-                        }
-                        else if (TravellerTimeAtPlace < DesiredTimeAtPlace)
-                        {
-                            //Have him wander inbetween here?
-                        }
+                        TravelToNextPoint();
+                    }
+                    else if (TravellerTimeAtPlace < DesiredTimeAtPlace)
+                    {
+                        //Have him wander inbetween here?
                     }
                 }
-
                 break;
             case Behaviour.Trader:
                 break;

@@ -4833,12 +4833,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb3ee88ed3236544bbbc13d60a79d21f, type: 3}
---- !u!1 &1384701939 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2771279389206569466, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
-    type: 3}
-  m_PrefabInstance: {fileID: 466219411}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1393380834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5696,9 +5690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716819c21d0fcde45abd660582a4d5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueWindow: {fileID: 3060259779477117230, guid: f88c348ce53d4294fb2d5947e3ab498b,
-    type: 3}
-  dialogueSpot: {fileID: 1384701939}
   oneShot: 1
   dialogue: No Entry! Go clean the stables!
 --- !u!1001 &1626973800
@@ -6870,82 +6861,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 222073106}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2121268891
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2121268894}
-  - component: {fileID: 2121268893}
-  - component: {fileID: 2121268892}
-  - component: {fileID: 2121268895}
-  m_Layer: 0
-  m_Name: TriggerEventObject
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2121268892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121268891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fabb106c1d67dc240ac9157040c34dcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EventName: Someone new arrived in town
-  EventCategories: 0e00000004000000
-  IsEventUnforgetabble: 1
-  EventWeight: 0.875
---- !u!65 &2121268893
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121268891}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.03, y: 3.37, z: 1}
-  m_Center: {x: -5, y: 0, z: -2.61}
---- !u!4 &2121268894
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121268891}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 1.67, z: 3.14}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2121268895
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121268891}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.78254426
-  m_Height: 6.709175
-  m_Direction: 1
-  m_Center: {x: 0.1318183, y: 0.21158385, z: 0}
 --- !u!1001 &2124633462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7219,6 +7134,75 @@ MonoBehaviour:
   EventObjectType: 0
   LinkedEvent: {fileID: 1288119250}
   EventId: Test Event
+--- !u!1001 &3416840581771837980
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322498, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3416840580331322503, guid: a78fa119ff5479c4cb2b42cbd2e7e148,
+        type: 3}
+      propertyPath: m_Name
+      value: TriggerEventObject
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a78fa119ff5479c4cb2b42cbd2e7e148, type: 3}
 --- !u!1001 &4837654976964132282
 PrefabInstance:
   m_ObjectHideFlags: 0

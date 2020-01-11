@@ -13,7 +13,7 @@ public class PlayerAction : BaseEvent
     // Start is called before the first frame update
     void Start()
     {
-        
+        AssignElements();
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class PlayerAction : BaseEvent
 
     private void OnMouseDown()
     {
-        if (CalculateDistance() && !actionCompleted)
+        if (!actionCompleted && CalculateDistance())
         {
             actionCompleted = true;
             spawnDialogue(message, false);

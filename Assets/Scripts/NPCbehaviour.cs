@@ -15,15 +15,15 @@ public enum Behaviour
 public class NPCbehaviour : MonoBehaviour
 {
     public Behaviour NPCBehaviourModel = Behaviour.Guard;
-    public NavMeshAgent agent;
+    NavMeshAgent agent;
 
     public Transform[] PatrollerPoints;
     private int PatrollerDestPoint = 0;
 
     public Transform[] TravellerPoints;
-    public int TravellerDestPoint = 0;
-    public float TravellerTimeAtPlace;
-    public float DesiredTimeAtPlace = 30f;
+    int TravellerDestPoint = 0;
+    float TravellerTimeAtPlace;
+    float DesiredTimeAtPlace = 30f;
 
     public Transform[] WandererPoints;
     int WandererDestinationPoints = 0;

@@ -61,18 +61,22 @@ public class NPCbehaviour : MonoBehaviour
         switch (NPCBehaviourModel)
         {
             case Behaviour.Traveller:
-                if (!agent.pathPending && agent.remainingDistance < 0.5f)
+                if (agent.isOnNavMesh)
                 {
-                    TravellerTimeAtPlace += Time.deltaTime;
-                    if (TravellerTimeAtPlace > DesiredTimeAtPlace)
+                    if (!agent.pathPending && agent.remainingDistance < 0.5f)
                     {
-                        TravelToNextPoint();
-                    }
-                    else if (TravellerTimeAtPlace < DesiredTimeAtPlace)
-                    {
-                        //Have him wander inbetween here?
+                        TravellerTimeAtPlace += Time.deltaTime;
+                        if (TravellerTimeAtPlace > DesiredTimeAtPlace)
+                        {
+                            TravelToNextPoint();
+                        }
+                        else if (TravellerTimeAtPlace < DesiredTimeAtPlace)
+                        {
+                            //Have him wander inbetween here?
+                        }
                     }
                 }
+
                 break;
             case Behaviour.Trader:
                 break;

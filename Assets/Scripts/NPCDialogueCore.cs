@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NPCDialogueCore : MonoBehaviour
 {
-    public GameObject dialogueWindow;
-    public GameObject dialogueSpot;
+    protected GameObject dialogueWindow;
+    protected GameObject dialogueSpot;
 
     GameObject player;
 
@@ -13,6 +13,8 @@ public class NPCDialogueCore : MonoBehaviour
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        dialogueSpot = GameObject.FindGameObjectWithTag("dialogueSpot");
+        dialogueWindow = GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnableController>().dialogueWindow;
     }
 
     public bool canTalk()

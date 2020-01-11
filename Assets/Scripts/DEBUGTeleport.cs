@@ -1,0 +1,22 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
+public class DEBUGTeleport : MonoBehaviour
+{
+    public GameObject Target;
+
+    GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    public void Teleport() 
+    {
+        player.GetComponent<NavMeshAgent>().destination = player.transform.position;
+        player.transform.position = Target.transform.position;
+    }
+}

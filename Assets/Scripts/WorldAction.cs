@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 
+/// <summary>
+/// Actions where clicking within range creates event
+/// </summary>
+
 public class WorldAction : BaseEvent
 {
     public string message = "";
-    public float accessRange;
-
-    GameObject spawnedDialogue;
-
     void Start()
     {
         AssignElements();
@@ -24,25 +24,9 @@ public class WorldAction : BaseEvent
 
     private void OnMouseDown()
     {
-        float distanceBetween = Vector3.Distance(player.transform.position, transform.position);
-        if (distanceBetween < accessRange)
+        if (CalculateDistance())
         {
-            player.GetComponent<NavMeshAgent>().enabled = false;
-            spawnedDialogue = Instantiate(dialogueWindow, dialogueSpot.transform);
-            spawnedDialogue.GetComponent<RectTransform>().localPosition.Set(0, 0, 0);
-            spawnedDialogue.GetComponent<DialogueInstance>().NewDialogueInstance(false, true, message, player);
-            spawnedDialogue.GetComponent<DialogueInstance>().button.GetComponent<Button>().onClick.RemoveAllListeners();
-            spawnedDialogue.GetComponent<DialogueInstance>().button.GetComponent<Button>().onClick.AddListener(OnDialogueEnd);   
+            spawnDialogue(message);
         }
-        else
-        {      
-        }
-    }
-
-    public void OnDialogueEnd() 
-    {
-        player.GetComponent<NavMeshAgent>().enabled = true;
-        CreateEvent();
-        Destroy(spawnedDialogue);
     }
 }

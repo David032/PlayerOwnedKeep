@@ -20,4 +20,12 @@ public enum categories
     Trade,
     Change,
     StatusQuo,
+    Kind,
+    Charitable,
+    Crafts,
+    HardWorker,
+    Lazy,
+    Skilled,
+    Unskilled,
+    Danger
 }

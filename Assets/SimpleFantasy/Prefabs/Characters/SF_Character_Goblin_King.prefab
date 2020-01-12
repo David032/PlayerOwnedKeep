@@ -4566,7 +4566,7 @@ NavMeshAgent:
   m_Radius: 0.62
   m_Speed: 3.5
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 99
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
@@ -4692,12 +4692,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPCBehaviourModel: 3
-  agent: {fileID: 0}
   PatrollerPoints: []
   TravellerPoints: []
-  TravellerDestPoint: 0
-  TravellerTimeAtPlace: 0
-  DesiredTimeAtPlace: 30
   WandererPoints: []
 --- !u!114 &-4499381101276795972
 MonoBehaviour:

@@ -6,6 +6,7 @@ public class Sense : MonoBehaviour
     protected float elapsedTime = 0.0f;
 
     protected NPCMentalModel MentalModel;
+    protected SpawnableController spawnables;
 
     protected virtual void Initialize() { }
     protected virtual void UpdateSense() { }
@@ -13,6 +14,7 @@ public class Sense : MonoBehaviour
     void Start()
     {
         MentalModel = GetComponent<NPCMentalModel>();
+        spawnables = GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnableController>();
         elapsedTime = 0.0f;
         Initialize();
     }

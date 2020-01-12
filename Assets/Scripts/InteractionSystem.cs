@@ -5,10 +5,12 @@ using UnityEngine;
 public class InteractionSystem : MonoBehaviour
 {
     InteractionSystemController controller;
+    SpawnableController spawnables;
 
     void Start()
     {
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<InteractionSystemController>();
+        spawnables = GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnableController>();
     }
 
     public float calculateTrust(NPCMentalModel npcA, NPCMentalModel npcB, float moodA) 
@@ -136,7 +138,7 @@ public class InteractionSystem : MonoBehaviour
             {
                 npcB.events.Add(eventToShare);
                 npcB.eventMemories.Add(new NPCEventMemory(eventToShare));
-                Instantiate(controller.dialogueObject,npcB.transform);
+                Instantiate(spawnables.NPCSharingIcon,npcB.transform);
             }      
         }
         else

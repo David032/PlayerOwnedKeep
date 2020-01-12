@@ -40,6 +40,7 @@ public class NPCperspective : Sense
                         MentalModel.events.Add(eventBeingAdded);
 
                         MentalModel.eventMemories.Add(new NPCEventMemory(hit.collider.GetComponent<EventObject>().LinkedEvent));
+                        Instantiate(spawnables.NPCLearningIcon, this.gameObject.transform);
                     }
                 }
                 else

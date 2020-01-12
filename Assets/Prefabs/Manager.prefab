@@ -98,7 +98,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumTrustLevel: 0.5
   MEMORYDECAY: 1000
-  dialogueObject: {fileID: 153772, guid: 259f3f16fb70b354491dabb97cee2a27, type: 3}
 --- !u!114 &144554029891098364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueWindow: {fileID: 3060259779477117230, guid: f88c348ce53d4294fb2d5947e3ab498b,
+    type: 3}
+  NPCSharingIcon: {fileID: 153772, guid: 259f3f16fb70b354491dabb97cee2a27, type: 3}
+  NPCLearningIcon: {fileID: 6650267131939886697, guid: 893e8e9669bf8264cb376afab4dc04c3,
     type: 3}
 --- !u!114 &6185662803139485475
 MonoBehaviour:

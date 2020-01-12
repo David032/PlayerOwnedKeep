@@ -27,5 +27,8 @@ public enum categories
     Lazy,
     Skilled,
     Unskilled,
-    Danger
+    Danger,
+    Dragon,
+    Heroic,
+    Villanous,
 }

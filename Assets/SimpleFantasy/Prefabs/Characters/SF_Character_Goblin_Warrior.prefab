@@ -469,6 +469,7 @@ GameObject:
   - component: {fileID: 2758381929911689892}
   - component: {fileID: 7796163483236272633}
   - component: {fileID: 4915362976233547725}
+  - component: {fileID: 1344265708118311029}
   m_Layer: 0
   m_Name: SF_Character_Goblin_Warrior
   m_TagString: NPC
@@ -733,6 +734,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1344265708118311029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb24e23fccf23a45843bf0145a6ad87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasKnowledgeOfEvent: 0
+  requiredEvent: {fileID: 0}
+  indexOfAreaToChange: 5
+  costToSetItTo: 1
 --- !u!1 &115158
 GameObject:
   m_ObjectHideFlags: 0

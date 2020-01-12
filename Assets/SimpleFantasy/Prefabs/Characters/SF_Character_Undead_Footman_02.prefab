@@ -1352,6 +1352,7 @@ GameObject:
   - component: {fileID: 7290624000562620319}
   - component: {fileID: 399141491898867322}
   - component: {fileID: 7499079913158414433}
+  - component: {fileID: 761460631454774146}
   m_Layer: 0
   m_Name: SF_Character_Undead_Footman_02
   m_TagString: NPC
@@ -1616,6 +1617,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &761460631454774146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb24e23fccf23a45843bf0145a6ad87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasKnowledgeOfEvent: 0
+  requiredEvent: {fileID: 0}
+  indexOfAreaToChange: 5
+  costToSetItTo: 1
 --- !u!1 &131770
 GameObject:
   m_ObjectHideFlags: 0

@@ -619,6 +619,7 @@ GameObject:
   - component: {fileID: -2582935749888392229}
   - component: {fileID: -2434198795497857829}
   - component: {fileID: 1584518723485303148}
+  - component: {fileID: 1480235990532486611}
   m_Layer: 0
   m_Name: SF_Character_Human_PeasantWoman_01
   m_TagString: NPC
@@ -845,6 +846,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1480235990532486611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb24e23fccf23a45843bf0145a6ad87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasKnowledgeOfEvent: 0
+  requiredEvent: {fileID: 0}
+  indexOfAreaToChange: 5
+  costToSetItTo: 1
 --- !u!1 &180664
 GameObject:
   m_ObjectHideFlags: 0

@@ -3003,6 +3003,7 @@ GameObject:
   - component: {fileID: -3797843361449921727}
   - component: {fileID: -5235122483848070472}
   - component: {fileID: -207798242435240252}
+  - component: {fileID: -673322688649615068}
   m_Layer: 0
   m_Name: SF_Character_Human_Knight_Dark
   m_TagString: NPC
@@ -3267,6 +3268,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-673322688649615068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb24e23fccf23a45843bf0145a6ad87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasKnowledgeOfEvent: 0
+  requiredEvent: {fileID: 0}
+  indexOfAreaToChange: 5
+  costToSetItTo: 1
 --- !u!1 &153968
 GameObject:
   m_ObjectHideFlags: 0

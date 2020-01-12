@@ -1112,6 +1112,7 @@ GameObject:
   - component: {fileID: 3465093654316278783}
   - component: {fileID: 8145942696364706445}
   - component: {fileID: 7774252081231538699}
+  - component: {fileID: -7181007925810375836}
   m_Layer: 0
   m_Name: SF_Character_Human_PeasantMan_01
   m_TagString: NPC
@@ -1376,6 +1377,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-7181007925810375836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb24e23fccf23a45843bf0145a6ad87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasKnowledgeOfEvent: 0
+  requiredEvent: {fileID: 0}
+  indexOfAreaToChange: 5
+  costToSetItTo: 1
 --- !u!1 &128630
 GameObject:
   m_ObjectHideFlags: 0

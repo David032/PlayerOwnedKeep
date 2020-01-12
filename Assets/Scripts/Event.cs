@@ -9,6 +9,8 @@ public class Event : MonoBehaviour
     public float weight;
     public bool memorable;
 
+    public int refId;
+
 
     void Start()
     {
@@ -35,5 +37,14 @@ public class Event : MonoBehaviour
         Categories = eventCategories;
         weight = eventWeight;
         memorable = unforgetable;
+    }
+
+    public void CreateEvent(string eventDesc, List<categories> eventCategories, float eventWeight, bool unforgetable, int refrenceId)
+    {
+        EventId = eventDesc;
+        Categories = eventCategories;
+        weight = eventWeight;
+        memorable = unforgetable;
+        refId = refrenceId;
     }
 }

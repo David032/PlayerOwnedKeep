@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6488569944584568508}
   - component: {fileID: 9050631428251249036}
   - component: {fileID: 144554029891098364}
-  - component: {fileID: 6185662803139485475}
   m_Layer: 0
   m_Name: Manager
   m_TagString: GameController
@@ -115,19 +114,6 @@ MonoBehaviour:
   NPCSharingIcon: {fileID: 153772, guid: 259f3f16fb70b354491dabb97cee2a27, type: 3}
   NPCLearningIcon: {fileID: 6650267131939886697, guid: 893e8e9669bf8264cb376afab4dc04c3,
     type: 3}
---- !u!114 &6185662803139485475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6488569944584568504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87080c9fe7117a340be782a13be459ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelMesh: {fileID: 23800000, guid: 483e92c60fe0e4042b39c25b5ed6adca, type: 2}
 --- !u!1 &7232960616945857558
 GameObject:
   m_ObjectHideFlags: 0

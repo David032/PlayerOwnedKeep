@@ -20,6 +20,7 @@ public class BaseEvent : MonoBehaviour
     public bool IsEventUnforgetabble = false;
     [Range(0f, 1f)]
     public float EventWeight = 0.75f;
+    public int refremceId = 0;
 
     protected GameObject spawnedDialogue;
 
@@ -42,7 +43,16 @@ public class BaseEvent : MonoBehaviour
         if (!gameObject.GetComponent<EventObject>())
         {
             Event thisEventEntry = Manager.gameObject.AddComponent<Event>();
-            thisEventEntry.CreateEvent(EventName, EventCategories, EventWeight, IsEventUnforgetabble);
+            if (refremceId != 0)
+            {
+                thisEventEntry.CreateEvent(EventName, EventCategories, EventWeight, IsEventUnforgetabble,refremceId);
+
+            }
+            else
+            {
+                thisEventEntry.CreateEvent(EventName, EventCategories, EventWeight, IsEventUnforgetabble);
+            }
+
             Manager.Events.Add(thisEventEntry);
             EventObject thisEvent = this.gameObject.AddComponent<EventObject>();
             thisEvent.EventId = EventName;
@@ -95,6 +105,7 @@ public class BaseEvent : MonoBehaviour
     public bool CalculateDistance() 
     {
         float distanceBetween = Vector3.Distance(player.transform.position, transform.position);
+        print(distanceBetween);
         if (distanceBetween < accessRange)
         {
             return true;

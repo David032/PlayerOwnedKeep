@@ -9004,6 +9004,7 @@ Transform:
   - {fileID: 1254264313}
   - {fileID: 1824640638}
   - {fileID: 257181305}
+  - {fileID: 1671524670}
   m_Father: {fileID: 736810320}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 58.317, z: 0}
@@ -9043,7 +9044,7 @@ MonoBehaviour:
   EventCategories: 
   IsEventUnforgetabble: 0
   EventWeight: 0.75
-  accessRange: 5
+  accessRange: 10
   message: Oh look, some gems
   idToAdd: 1
   nameOfItem: Gems
@@ -27354,7 +27355,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 408726443}
+      objectReference: {fileID: 1671524669}
     - target: {fileID: 7806841817727907440, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -39562,6 +39563,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 0.040501654, z: 5.555069}
   m_Center: {x: 0, y: 0.020250827, z: 0.0000076293945}
+--- !u!1 &1671524669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671524670}
+  m_Layer: 0
+  m_Name: GemRocksTeleportPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1671524670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671524669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.29, y: 0, z: 8.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 408512247}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1672950133
 PrefabInstance:
   m_ObjectHideFlags: 0

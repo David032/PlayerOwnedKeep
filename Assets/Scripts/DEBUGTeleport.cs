@@ -16,7 +16,7 @@ public class DEBUGTeleport : MonoBehaviour
 
     public void Teleport() 
     {
-        player.GetComponent<NavMeshAgent>().destination = player.transform.position;
+        player.GetComponent<NavMeshAgent>().Warp(Target.transform.position);
         player.transform.position = Target.transform.position;
     }
 }

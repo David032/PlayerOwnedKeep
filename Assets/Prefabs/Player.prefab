@@ -1112,6 +1112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Inventory: []
+  inventoryText: {fileID: 0}
 --- !u!1 &1105126117292771313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,6 +3375,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1105126117292538747}
     m_Modifications:
+    - target: {fileID: 1338457861000878010, guid: cbf2a7c376697e04ea933e0ec5e87717,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338457861000878010, guid: cbf2a7c376697e04ea933e0ec5e87717,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338457861000878010, guid: cbf2a7c376697e04ea933e0ec5e87717,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155723457493525561, guid: cbf2a7c376697e04ea933e0ec5e87717,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155723457493525561, guid: cbf2a7c376697e04ea933e0ec5e87717,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155723457493525561, guid: cbf2a7c376697e04ea933e0ec5e87717,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087394224595580481, guid: cbf2a7c376697e04ea933e0ec5e87717,
+        type: 3}
+      propertyPath: m_Value
+      value: 1.0000006
+      objectReference: {fileID: 0}
     - target: {fileID: 9214041218292828370, guid: cbf2a7c376697e04ea933e0ec5e87717,
         type: 3}
       propertyPath: m_Name

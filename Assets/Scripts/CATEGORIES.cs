@@ -31,4 +31,8 @@ public enum categories
     Dragon,
     Heroic,
     Villanous,
+    NotImportant,
+    Important,
+    Death,
+    Life
 }

@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum NPCAnimationState
+{
+    None,
+    Sitting,
+}
+
 public class NPCController : MonoBehaviour
 {
     NavMeshAgent agent;
     Animator anim;
+    public NPCAnimationState animationState = NPCAnimationState.None;
     Rigidbody rb;
 
     void Start()
@@ -17,19 +24,34 @@ public class NPCController : MonoBehaviour
         anim.SetInteger("WeaponType_int", 0);
         anim.SetInteger("MeleeType_int", 0);
         //
+        switch (animationState)
+        {
+            case NPCAnimationState.None:
+                break;
+            case NPCAnimationState.Sitting:
+                anim.SetInteger("Animation_int", 9);
+                anim.SetFloat("Speed_f", 0);
+                break;
+            default:
+                break;
+        }
     }
 
     private void Update()
     {
-        if (agent.velocity != Vector3.zero)
+        if (animationState == NPCAnimationState.None)
         {
-            anim.SetInteger("Animation_int", 0);
-            anim.SetFloat("Speed_f", agent.speed);
+            if (agent.velocity != Vector3.zero)
+            {
+                anim.SetInteger("Animation_int", 0);
+                anim.SetFloat("Speed_f", agent.speed);
+            }
+            else
+            {
+                anim.SetFloat("Speed_f", 0);
+                anim.SetInteger("Animation_int", 1);
+            }
         }
-        else
-        {
-            anim.SetFloat("Speed_f", 0);
-            anim.SetInteger("Animation_int", 1);
-        }
+
     }
 }

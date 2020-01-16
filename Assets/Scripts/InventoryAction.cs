@@ -43,6 +43,13 @@ public class InventoryAction : BaseEvent
         {
             GetComponent<NPCDialogue>().enabled = false;
             spawnDialogue(questCompletedMessage);
+            CreateEvent();
+
+            Event eventBeingAdded = GetComponent<EventObject>().LinkedEvent;
+            MentalModel.events.Add(eventBeingAdded);
+
+            MentalModel.eventMemories.Add(new NPCEventMemory(eventBeingAdded));
+            Instantiate(spawnables.NPCLearningIcon, this.gameObject.transform);
         }
     }
 }

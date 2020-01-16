@@ -23,6 +23,8 @@ public class BaseEvent : MonoBehaviour
     public int refremceId = 0;
 
     protected GameObject spawnedDialogue;
+    public SpawnableController spawnables;
+    protected NPCMentalModel MentalModel;
 
     public float accessRange;
 
@@ -51,12 +53,12 @@ public class BaseEvent : MonoBehaviour
             else
             {
                 thisEventEntry.CreateEvent(EventName, EventCategories, EventWeight, IsEventUnforgetabble);
-            }
 
+            }
             Manager.Events.Add(thisEventEntry);
             EventObject thisEvent = this.gameObject.AddComponent<EventObject>();
             thisEvent.EventId = EventName;
-            thisEvent.EventObjectType = ObjectType.Visual;
+            thisEvent.EventObjectType = ObjectType.Audio;
             thisEvent.LinkedEvent = thisEventEntry;
         }
     }
@@ -67,6 +69,8 @@ public class BaseEvent : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         dialogueSpot = GameObject.FindGameObjectWithTag("dialogueSpot");
         dialogueWindow = GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnableController>().dialogueWindow;
+        spawnables = GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnableController>();
+        MentalModel = GetComponent<NPCMentalModel>();
     }
 
     public void spawnDialogue(string message) 

@@ -14971,7 +14971,7 @@ PrefabInstance:
     - target: {fileID: 6488569944584568505, guid: 3e2879d38c20cd44f80951ebd971a228,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6488569944584568505, guid: 3e2879d38c20cd44f80951ebd971a228,
         type: 3}
@@ -25367,7 +25367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488444, guid: ff375387c8515934c86e80998afb14c3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.31955558
+      value: -0.41408047
       objectReference: {fileID: 0}
     - target: {fileID: 488444, guid: ff375387c8515934c86e80998afb14c3, type: 3}
       propertyPath: m_LocalRotation.z
@@ -25375,7 +25375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488444, guid: ff375387c8515934c86e80998afb14c3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9475676
+      value: 0.9102403
       objectReference: {fileID: 0}
     - target: {fileID: 488444, guid: ff375387c8515934c86e80998afb14c3, type: 3}
       propertyPath: m_RootOrder
@@ -25387,7 +25387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488444, guid: ff375387c8515934c86e80998afb14c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -37.272003
+      value: -48.923004
       objectReference: {fileID: 0}
     - target: {fileID: 488444, guid: ff375387c8515934c86e80998afb14c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -28299,6 +28299,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.0012191007
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110543754860244581, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0000103976245
       objectReference: {fileID: 0}
     - target: {fileID: 1111110942749831614, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
@@ -47343,15 +47348,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1878681795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fabb106c1d67dc240ac9157040c34dcd, type: 3}
+  m_Script: {fileID: 11500000, guid: fce67567140d2484e8bfdcbbd3a15ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventName: The player rescued a cat from that tree
-  EventCategories: 0700000009000000
+  EventName: 
+  EventCategories: 
   IsEventUnforgetabble: 0
-  EventWeight: 0.35
+  EventWeight: 0.75
   refremceId: 0
-  accessRange: 10
+  accessRange: 5
+  message: You gingerly tease the cat out of the tree
+  idToAdd: 5
+  nameOfItem: Cat
+  descriptionOfItem: Meow?
 --- !u!65 &1878681797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47803,6 +47812,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb3ee88ed3236544bbbc13d60a79d21f, type: 3}
+--- !u!1 &1902444723 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128194, guid: ff375387c8515934c86e80998afb14c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1036037445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1902444724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902444723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691340cfb05677142a7b6b59d3be6220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: The player got a cat down from the tree
+  EventCategories: 10000000070000000900000000000000
+  IsEventUnforgetabble: 0
+  EventWeight: 0.2
+  refremceId: 4
+  accessRange: 2.5
+  requiredItem: 0
+  questCompletedMessage: Thank you for rescuing my cat!
+--- !u!114 &1902444725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902444723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716819c21d0fcde45abd660582a4d5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneShot: 1
+  dialogue: Can you get my cat down from the tree please?
 --- !u!1001 &1902646429
 PrefabInstance:
   m_ObjectHideFlags: 0

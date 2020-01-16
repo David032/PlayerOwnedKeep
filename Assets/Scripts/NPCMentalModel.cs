@@ -48,6 +48,11 @@ public class NPCMentalModel : MonoBehaviour
             {
                 int randomSelection = Random.Range(0, currentCategories);
                 likes.Add((categories)randomSelection);
+                if (dislikes.Contains((categories)randomSelection))
+                {
+                    dislikes.Remove((categories)randomSelection);
+                    i -= 1;
+                }
             }
         }
         if (dislikes.Capacity == 0)
@@ -56,6 +61,11 @@ public class NPCMentalModel : MonoBehaviour
             {
                 int randomSelection = Random.Range(0, currentCategories);
                 dislikes.Add((categories)randomSelection);
+                if (likes.Contains((categories)randomSelection))
+                {
+                    likes.Remove((categories)randomSelection);
+                    i -= 1;
+                }
             }
         }
     }

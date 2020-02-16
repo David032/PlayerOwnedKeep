@@ -6,11 +6,13 @@ public class InteractionSystem : MonoBehaviour
 {
     InteractionSystemController controller;
     SpawnableController spawnables;
+    TimeManager timekeeper;
 
     void Start()
     {
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<InteractionSystemController>();
         spawnables = GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnableController>();
+        timekeeper = GameObject.FindGameObjectWithTag("GameController").GetComponent<TimeManager>();
     }
 
     public float calculateTrust(NPCMentalModel npcA, NPCMentalModel npcB, float moodA) 
@@ -130,6 +132,14 @@ public class InteractionSystem : MonoBehaviour
         float trustVal = calculateTrust(npcA, npcB, mood);
         float commChance = Random.Range(0f, 1f);
 
+        foreach (NPCInteractionMemory item in npcA.interactedNPCS)
+        {
+            if (item.interactedWith == npcB)
+            {
+                trustVal += item.lastTrustValue / 10;
+            }
+        }
+
         if (trustVal < commChance)
         {
             Event eventToShare = npcA.events[Random.Range(0, (npcA.events.Capacity))];
@@ -139,7 +149,11 @@ public class InteractionSystem : MonoBehaviour
                 npcB.events.Add(eventToShare);
                 npcB.eventMemories.Add(new NPCEventMemory(eventToShare));
                 Instantiate(spawnables.NPCSharingIcon,npcB.transform);
-            }      
+            }
+
+            npcA.interactedNPCS.Add(new NPCInteractionMemory(npcB, trustVal, timekeeper.getRawTime()));
+            npcB.interactedNPCS.Add(new NPCInteractionMemory(npcA, trustVal, timekeeper.getRawTime()));
+
         }
         else
         {

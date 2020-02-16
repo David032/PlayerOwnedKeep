@@ -20,7 +20,7 @@ public class EventTrigger : BaseEvent
     {
         if (other.gameObject.tag == "Player")
         {
-            CreateEvent();
+            CreateEvent(ObjectType.Visual);
             Destroy(this.gameObject.GetComponent<BoxCollider>(), 5f);
         }
     }

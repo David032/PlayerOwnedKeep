@@ -21,6 +21,7 @@ public class BaseEvent : MonoBehaviour
     [Range(0f, 1f)]
     public float EventWeight = 0.75f;
     public int refremceId = 0;
+    public ObjectType EventType = ObjectType.Visual;
 
     protected GameObject spawnedDialogue;
     public SpawnableController spawnables;
@@ -58,7 +59,30 @@ public class BaseEvent : MonoBehaviour
             Manager.Events.Add(thisEventEntry);
             EventObject thisEvent = this.gameObject.AddComponent<EventObject>();
             thisEvent.EventId = EventName;
-            thisEvent.EventObjectType = ObjectType.Audio;
+            thisEvent.EventObjectType = EventType;
+            thisEvent.LinkedEvent = thisEventEntry;
+        }
+    }
+
+    public void CreateEvent(ObjectType type)
+    {
+        if (!gameObject.GetComponent<EventObject>())
+        {
+            Event thisEventEntry = Manager.gameObject.AddComponent<Event>();
+            if (refremceId != 0)
+            {
+                thisEventEntry.CreateEvent(EventName, EventCategories, EventWeight, IsEventUnforgetabble, refremceId);
+
+            }
+            else
+            {
+                thisEventEntry.CreateEvent(EventName, EventCategories, EventWeight, IsEventUnforgetabble);
+
+            }
+            Manager.Events.Add(thisEventEntry);
+            EventObject thisEvent = this.gameObject.AddComponent<EventObject>();
+            thisEvent.EventId = EventName;
+            thisEvent.EventObjectType = type;
             thisEvent.LinkedEvent = thisEventEntry;
         }
     }
@@ -97,6 +121,13 @@ public class BaseEvent : MonoBehaviour
     {
         player.GetComponent<NavMeshAgent>().enabled = true;
         CreateEvent();
+        Destroy(spawnedDialogue);
+    }
+
+    public void OnDialogueEnd(ObjectType type)
+    {
+        player.GetComponent<NavMeshAgent>().enabled = true;
+        CreateEvent(type);
         Destroy(spawnedDialogue);
     }
 

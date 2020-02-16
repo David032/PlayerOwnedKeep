@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class NPCMentalModel : MonoBehaviour
     public List<Event> unforgettableEvents;
     public List<NPCEventMemory> eventMemories;
     public float opinion = 0;
+    public List<NPCInteractionMemory> interactedNPCS;
 
     [Range(0,1)]
     public float mood = 1;
@@ -39,6 +41,13 @@ public class NPCMentalModel : MonoBehaviour
         }
 
         opinion = interactionSystem.calculateOpinion(this);
+
+        if (interactedNPCS.Capacity > 10)
+        {
+            interactedNPCS = interactedNPCS.OrderBy(w => w.timeAdded).ToList();
+            interactedNPCS.Remove(interactedNPCS[0]);
+        }
+
     } 
     void CreateCategories() 
     {

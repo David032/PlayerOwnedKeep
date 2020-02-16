@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractionSystemController : MonoBehaviour
 {
-    public float minimumTrustLevel = 0.5f;
+    public float minimumTrustLevel = 0.25f;
     public float MEMORYDECAY = 1000f;
 
 

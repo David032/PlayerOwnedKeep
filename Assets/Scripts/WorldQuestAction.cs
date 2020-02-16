@@ -39,7 +39,7 @@ public class WorldQuestAction : BaseEvent
             if (!isCompleted)
             {
                 spawnDialogue(questCompletedMessage);
-                CreateEvent();
+                CreateEvent(ObjectType.Visual);
             }
 
         }

@@ -3338,6 +3338,16 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8656803206336520908, guid: 304528b0d453fca42a6f8861aa2ce0bb,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656803206336520908, guid: 304528b0d453fca42a6f8861aa2ce0bb,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304528b0d453fca42a6f8861aa2ce0bb, type: 3}
 --- !u!4 &144611795 stripped
@@ -4218,6 +4228,11 @@ PrefabInstance:
         type: 3}
       propertyPath: likes.Array.data[1]
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504199714865466666, guid: 9952bbd97819ed544a9f121971091369,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6914450427628321361, guid: 9952bbd97819ed544a9f121971091369,
         type: 3}
@@ -6294,6 +6309,16 @@ PrefabInstance:
       propertyPath: likes.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -6960519394011953506, guid: b1b76099ffa7d5d46b9a818edc842605,
+        type: 3}
+      propertyPath: FactionId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -6960519394011953506, guid: b1b76099ffa7d5d46b9a818edc842605,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -673322688649615068, guid: b1b76099ffa7d5d46b9a818edc842605,
         type: 3}
       propertyPath: requiredEventId
@@ -6546,6 +6571,11 @@ PrefabInstance:
         type: 3}
       propertyPath: likes.Array.data[1]
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -489526675886705576, guid: c80d63d739f7231458975214a486d247,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 180650, guid: c80d63d739f7231458975214a486d247, type: 3}
       propertyPath: m_Name
@@ -6876,6 +6906,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dislikes.Array.data[0]
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656803206336520908, guid: 304528b0d453fca42a6f8861aa2ce0bb,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656803206336520908, guid: 304528b0d453fca42a6f8861aa2ce0bb,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304528b0d453fca42a6f8861aa2ce0bb, type: 3}
@@ -8844,6 +8884,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1035911584184815913, guid: 155f36a7e97d7d9489dd67fac44d4d47,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035911584184815913, guid: 155f36a7e97d7d9489dd67fac44d4d47,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1529035536853851707, guid: 155f36a7e97d7d9489dd67fac44d4d47,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -9353,6 +9403,8 @@ MonoBehaviour:
   IsEventUnforgetabble: 0
   EventWeight: 0.75
   refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 0}
   accessRange: 10
   message: Oh look, some gems
   idToAdd: 1
@@ -10581,6 +10633,16 @@ PrefabInstance:
     - target: {fileID: -8449740372184007241, guid: a061d33e9f404ad4eb8462bed1c0a2ea,
         type: 3}
       propertyPath: requiredEventId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2715641896934920474, guid: a061d33e9f404ad4eb8462bed1c0a2ea,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2715641896934920474, guid: a061d33e9f404ad4eb8462bed1c0a2ea,
+        type: 3}
+      propertyPath: EnableDebug
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 136270, guid: a061d33e9f404ad4eb8462bed1c0a2ea, type: 3}
@@ -11815,6 +11877,8 @@ MonoBehaviour:
   IsEventUnforgetabble: 0
   EventWeight: 0.9
   refremceId: 1
+  EventType: 0
+  spawnables: {fileID: 0}
   accessRange: 5
   requiredItem: 2
   questCompletedMessage: You mount the dragon's head on the plinth for all to see
@@ -18409,6 +18473,16 @@ PrefabInstance:
       propertyPath: dislikes.Array.data[0]
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: -1409586014943601550, guid: a718ebd87a9d863409aff895ccf85aae,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1409586014943601550, guid: a718ebd87a9d863409aff895ccf85aae,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 115408, guid: a718ebd87a9d863409aff895ccf85aae, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Bartender
@@ -18573,6 +18647,8 @@ MonoBehaviour:
   IsEventUnforgetabble: 0
   EventWeight: 0.1
   refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 0}
   accessRange: 5
   requiredItem: 1
   questCompletedMessage: You found my gems! Thank you
@@ -19205,6 +19281,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 759050807}
     m_Modifications:
+    - target: {fileID: -6343113905912895217, guid: 103dc487d6b30b747b419331541145e9,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6343113905912895217, guid: 103dc487d6b30b747b419331541145e9,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -3659383264565018750, guid: 103dc487d6b30b747b419331541145e9,
         type: 3}
       propertyPath: requiredEventId
@@ -21017,6 +21103,16 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8201776908003890937, guid: c69439a7eeb796d429a19aac66206c85,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8201776908003890937, guid: c69439a7eeb796d429a19aac66206c85,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c69439a7eeb796d429a19aac66206c85, type: 3}
 --- !u!4 &889570492 stripped
@@ -22537,6 +22633,16 @@ PrefabInstance:
       propertyPath: requiredEventId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1409586014943601550, guid: a718ebd87a9d863409aff895ccf85aae,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1409586014943601550, guid: a718ebd87a9d863409aff895ccf85aae,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 115408, guid: a718ebd87a9d863409aff895ccf85aae, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Bartender
@@ -23109,6 +23215,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 759050807}
     m_Modifications:
+    - target: {fileID: -4232997876970197948, guid: a3b18ca02abad9642a52aaa6235f4466,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4232997876970197948, guid: a3b18ca02abad9642a52aaa6235f4466,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 129452, guid: a3b18ca02abad9642a52aaa6235f4466, type: 3}
       propertyPath: m_Name
       value: SF_Character_Undead_Footman_02
@@ -24219,6 +24335,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dislikes.Array.data[0]
       value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: -7815392361589030845, guid: cb3ee88ed3236544bbbc13d60a79d21f,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7815392361589030845, guid: cb3ee88ed3236544bbbc13d60a79d21f,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1708072419550081695, guid: cb3ee88ed3236544bbbc13d60a79d21f,
         type: 3}
@@ -25407,6 +25533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: likes.Array.data[1]
       value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964904767587950671, guid: ff375387c8515934c86e80998afb14c3,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5352417504112925156, guid: ff375387c8515934c86e80998afb14c3,
         type: 3}
@@ -27678,6 +27809,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 759050807}
     m_Modifications:
+    - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 115122, guid: feee25723b3093a4f85ff5bd82d38dec, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Bard
@@ -28298,7 +28439,7 @@ PrefabInstance:
     - target: {fileID: 1110543754860244581, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0012191007
+      value: 0.0012494404
       objectReference: {fileID: 0}
     - target: {fileID: 1110543754860244581, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
@@ -30087,6 +30228,16 @@ PrefabInstance:
       propertyPath: requiredEventId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2715641896934920474, guid: a061d33e9f404ad4eb8462bed1c0a2ea,
+        type: 3}
+      propertyPath: FactionId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2715641896934920474, guid: a061d33e9f404ad4eb8462bed1c0a2ea,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 136270, guid: a061d33e9f404ad4eb8462bed1c0a2ea, type: 3}
       propertyPath: m_Name
       value: SmallAreaPatroller
@@ -30774,6 +30925,16 @@ PrefabInstance:
       propertyPath: likes.Array.data[3]
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: -1409586014943601550, guid: a718ebd87a9d863409aff895ccf85aae,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1409586014943601550, guid: a718ebd87a9d863409aff895ccf85aae,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 115408, guid: a718ebd87a9d863409aff895ccf85aae, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Bartender
@@ -30900,6 +31061,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dislikes.Array.data[1]
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: -8624676922661300073, guid: 45378b2d5820a5f4e9fb8e893a852622,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8624676922661300073, guid: 45378b2d5820a5f4e9fb8e893a852622,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 163930, guid: 45378b2d5820a5f4e9fb8e893a852622, type: 3}
       propertyPath: m_Name
@@ -31270,6 +31441,16 @@ PrefabInstance:
       propertyPath: likes.Array.data[1]
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: -2833293040426647376, guid: 1ae6e4e008749404d95ce29b596ce5e0,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2833293040426647376, guid: 1ae6e4e008749404d95ce29b596ce5e0,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 108508, guid: 1ae6e4e008749404d95ce29b596ce5e0, type: 3}
       propertyPath: m_Name
       value: BTown'sWizard (1)
@@ -31415,6 +31596,11 @@ PrefabInstance:
         type: 3}
       propertyPath: mood
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -3576111825558477009, guid: 3b17d2db7617dd643940c4be66ab5713,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 194086, guid: 3b17d2db7617dd643940c4be66ab5713, type: 3}
       propertyPath: m_Name
@@ -31717,6 +31903,16 @@ PrefabInstance:
     - target: {fileID: 402444, guid: e5ba9ea9313a263419e66f4ed62f0fce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215830009039206194, guid: e5ba9ea9313a263419e66f4ed62f0fce,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215830009039206194, guid: e5ba9ea9313a263419e66f4ed62f0fce,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8955740499393207544, guid: e5ba9ea9313a263419e66f4ed62f0fce,
         type: 3}
@@ -33194,6 +33390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: likes.Array.data[1]
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8201776908003890937, guid: c69439a7eeb796d429a19aac66206c85,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c69439a7eeb796d429a19aac66206c85, type: 3}
@@ -34812,6 +35013,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5215830009039206194, guid: e5ba9ea9313a263419e66f4ed62f0fce,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215830009039206194, guid: e5ba9ea9313a263419e66f4ed62f0fce,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8955740499393207544, guid: e5ba9ea9313a263419e66f4ed62f0fce,
         type: 3}
       propertyPath: WandererPoints.Array.size
@@ -35250,6 +35461,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 759050807}
     m_Modifications:
+    - target: {fileID: -8624676922661300073, guid: 45378b2d5820a5f4e9fb8e893a852622,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8624676922661300073, guid: 45378b2d5820a5f4e9fb8e893a852622,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 163930, guid: 45378b2d5820a5f4e9fb8e893a852622, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Knight_Templar (1)
@@ -36575,6 +36796,8 @@ MonoBehaviour:
   IsEventUnforgetabble: 0
   EventWeight: 0.35
   refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 0}
   accessRange: 15
   message: You heroically charge into the tomb, slaying all the spiders you encounter!
 --- !u!65 &1446276633
@@ -38969,6 +39192,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 759050807}
     m_Modifications:
+    - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 115122, guid: feee25723b3093a4f85ff5bd82d38dec, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Bard
@@ -41670,6 +41903,16 @@ PrefabInstance:
       propertyPath: WandererPoints.Array.data[1]
       value: 
       objectReference: {fileID: 548136441}
+    - target: {fileID: -489526675886705576, guid: c80d63d739f7231458975214a486d247,
+        type: 3}
+      propertyPath: FactionId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -489526675886705576, guid: c80d63d739f7231458975214a486d247,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 180650, guid: c80d63d739f7231458975214a486d247, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_PeasantWoman_01
@@ -41956,6 +42199,16 @@ PrefabInstance:
         type: 3}
       propertyPath: likes.Array.data[1]
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -2833293040426647376, guid: 1ae6e4e008749404d95ce29b596ce5e0,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2833293040426647376, guid: 1ae6e4e008749404d95ce29b596ce5e0,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108508, guid: 1ae6e4e008749404d95ce29b596ce5e0, type: 3}
       propertyPath: m_Name
@@ -45106,6 +45359,8 @@ MonoBehaviour:
   IsEventUnforgetabble: 0
   EventWeight: 0.75
   refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 0}
   accessRange: 10
   message: You gingerly pickup a bone that's poking through the surface
   idToAdd: 3
@@ -46920,6 +47175,8 @@ MonoBehaviour:
   IsEventUnforgetabble: 0
   EventWeight: 0.45
   refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 0}
   accessRange: 5
   requiredItem: 3
   questCompletedMessage: Thank you for getting a bone for my dog
@@ -47356,6 +47613,8 @@ MonoBehaviour:
   IsEventUnforgetabble: 0
   EventWeight: 0.75
   refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 0}
   accessRange: 5
   message: You gingerly tease the cat out of the tree
   idToAdd: 5
@@ -47727,6 +47986,16 @@ PrefabInstance:
       propertyPath: dislikes.Array.data[0]
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: -7815392361589030845, guid: cb3ee88ed3236544bbbc13d60a79d21f,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7815392361589030845, guid: cb3ee88ed3236544bbbc13d60a79d21f,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1708072419550081695, guid: cb3ee88ed3236544bbbc13d60a79d21f,
         type: 3}
       propertyPath: requiredEvent
@@ -47835,6 +48104,8 @@ MonoBehaviour:
   IsEventUnforgetabble: 0
   EventWeight: 0.2
   refremceId: 4
+  EventType: 0
+  spawnables: {fileID: 0}
   accessRange: 2.5
   requiredItem: 0
   questCompletedMessage: Thank you for rescuing my cat!
@@ -48884,6 +49155,16 @@ PrefabInstance:
         type: 3}
       propertyPath: likes.Array.data[1]
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: -4312254855739183393, guid: 1779ea60ee0dd2b44a60bc7c572b1af7,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4312254855739183393, guid: 1779ea60ee0dd2b44a60bc7c572b1af7,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 121438, guid: 1779ea60ee0dd2b44a60bc7c572b1af7, type: 3}
       propertyPath: m_Name
@@ -50613,6 +50894,16 @@ PrefabInstance:
     - target: {fileID: 1928889235878403098, guid: e8cbd5ed802e012489541d450e8273d9,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812925649703756733, guid: e8cbd5ed802e012489541d450e8273d9,
+        type: 3}
+      propertyPath: FactionId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812925649703756733, guid: e8cbd5ed802e012489541d450e8273d9,
+        type: 3}
+      propertyPath: EnableDebug
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -53214,6 +53505,8 @@ MonoBehaviour:
   IsEventUnforgetabble: 0
   EventWeight: 0.25
   refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 0}
   accessRange: 1
   message: Nothing intresting happens
 --- !u!4 &2063613291 stripped
@@ -53871,6 +54164,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WalkableMask
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -2715641896934920474, guid: a061d33e9f404ad4eb8462bed1c0a2ea,
+        type: 3}
+      propertyPath: FactionId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2715641896934920474, guid: a061d33e9f404ad4eb8462bed1c0a2ea,
+        type: 3}
+      propertyPath: EnableDebug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 136270, guid: a061d33e9f404ad4eb8462bed1c0a2ea, type: 3}
       propertyPath: m_Name
@@ -54675,6 +54978,8 @@ MonoBehaviour:
   IsEventUnforgetabble: 0
   EventWeight: 0.75
   refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 0}
   accessRange: 10
   message: You descend into the dragon's lair, and after a long and grueling fight,
     slay the dragon!

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class InteractionSystem : MonoBehaviour
 {
@@ -136,11 +137,16 @@ public class InteractionSystem : MonoBehaviour
         {
             if (item.interactedWith == npcB)
             {
-                trustVal += item.lastTrustValue / 10;
+                trustVal += item.lastTrustValue / controller.repeatedConnectionRatio;
             }
         }
 
-        if (trustVal < commChance)
+        if (npcA.FactionId == npcB.FactionId)
+        {
+            trustVal += controller.repeatedConnectionRatio / 100;
+        }
+
+        if (trustVal > commChance)
         {
             Event eventToShare = npcA.events[Random.Range(0, (npcA.events.Capacity))];
 
@@ -151,12 +157,15 @@ public class InteractionSystem : MonoBehaviour
                 Instantiate(spawnables.NPCSharingIcon,npcB.transform);
             }
 
+
             npcA.interactedNPCS.Add(new NPCInteractionMemory(npcB, trustVal, timekeeper.getRawTime()));
             npcB.interactedNPCS.Add(new NPCInteractionMemory(npcA, trustVal, timekeeper.getRawTime()));
 
         }
-        else
+        else if(trustVal < commChance)
         {
+            print("Trust value was " + trustVal + " and Comm chance was " + commChance);
         }
+
     }
 }

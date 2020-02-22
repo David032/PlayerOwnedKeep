@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(NPCOpinionRenderer))]
 public class NPCMentalModel : MonoBehaviour
 {
+    public bool EnableDebug = false;
+
     public List<categories> likes;
     public List<categories> dislikes;
     public List<Event> events;
@@ -16,6 +18,8 @@ public class NPCMentalModel : MonoBehaviour
 
     [Range(0,1)]
     public float mood = 1;
+
+    public Faction FactionId = Faction.None;
 
     NPCOpinionRenderer opinionRenderer;
     InteractionSystem interactionSystem;
@@ -48,6 +52,8 @@ public class NPCMentalModel : MonoBehaviour
             interactedNPCS.Remove(interactedNPCS[0]);
         }
 
+        DebugViews();
+        MemoryDecay();
     } 
     void CreateCategories() 
     {
@@ -75,6 +81,38 @@ public class NPCMentalModel : MonoBehaviour
                     likes.Remove((categories)randomSelection);
                     i -= 1;
                 }
+            }
+        }
+    }
+
+    void DebugViews() 
+    {
+        if (EnableDebug)
+        {
+            foreach (NPCInteractionMemory item in interactedNPCS)
+            {
+                Debug.DrawLine(this.gameObject.transform.position, item.interactedWith.gameObject.transform.position, Color.red);
+            }
+
+            GameObject[] otherNPCS = GameObject.FindGameObjectsWithTag("NPC");
+            foreach (GameObject item in otherNPCS)
+            {
+                if (item.GetComponent<NPCMentalModel>().FactionId == FactionId)
+                {
+                    Debug.DrawLine(this.transform.position, item.transform.position, Color.blue);
+                }
+            }
+        }
+    }
+
+    void MemoryDecay() 
+    {
+        foreach (NPCEventMemory item in eventMemories)
+        {
+            if (item.fValue < 0)
+            {
+                Destroy(item);
+                eventMemories.Sort();
             }
         }
     }

@@ -19,6 +19,9 @@ public class NPCMentalModel : MonoBehaviour
     [Range(0,1)]
     public float mood = 1;
 
+    [Range(0.1f, 1f)]
+    public float memoryReliability = 0.95f;
+
     public Faction FactionId = Faction.None;
 
     NPCOpinionRenderer opinionRenderer;
@@ -41,10 +44,10 @@ public class NPCMentalModel : MonoBehaviour
 
         foreach (Event item in events)
         {
-            float testInteractionValue = interactionSystem.calculateValue(this, item);
+            float testInteractionValue = interactionSystem.CalculateValue(this, item);
         }
 
-        opinion = interactionSystem.calculateOpinion(this);
+        opinion = interactionSystem.CalculateOpinion(this);
 
         if (interactedNPCS.Capacity > 10)
         {

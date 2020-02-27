@@ -16,7 +16,8 @@ public class InteractionSystem : MonoBehaviour
         timekeeper = GameObject.FindGameObjectWithTag("GameController").GetComponent<TimeManager>();
     }
 
-    public float calculateTrust(NPCMentalModel npcA, NPCMentalModel npcB, float moodA) 
+    //Calculate trust between 2 NPCs
+    public float CalculateTrust(NPCMentalModel npcA, NPCMentalModel npcB, float moodA) 
     {
         int commonLikes = 0;
         int commonDislikes = 0;
@@ -52,7 +53,8 @@ public class InteractionSystem : MonoBehaviour
         return trustVal;
     }
 
-    public int calculateCommonalities(NPCMentalModel npc,Event eventId) 
+    //Calculate common likes & dislikes between 2 NPCs
+    public int CalculateCommonalities(NPCMentalModel npc,Event eventId) 
     {
         int likesInEvent = 0;
         int dislikesInEvent = 0;
@@ -76,7 +78,8 @@ public class InteractionSystem : MonoBehaviour
         return commonalities;
     }
 
-    public float calculateDecay(NPCEventMemory eventMemory) 
+    //Calculate the decay value of an event
+    public float CalculateDecay(NPCEventMemory eventMemory) 
     {
         float currentTime = GameObject.FindGameObjectWithTag("GameController").GetComponent<TimeManager>().getRawTime();
 
@@ -85,7 +88,8 @@ public class InteractionSystem : MonoBehaviour
         return decayTime;
     }
 
-    public float calculateValue(NPCMentalModel npc, Event eventId) 
+    //Calculate the value of an event
+    public float CalculateValue(NPCMentalModel npc, Event eventId) 
     {
         float fValue = -1;
 
@@ -101,7 +105,7 @@ public class InteractionSystem : MonoBehaviour
             if (item.learntEvent == eventId)
             {
                 thisEventKnowledge = item;
-                fValue = calculateDecay(thisEventKnowledge) * (calculateCommonalities(npc, eventId)) * eventId.weight;
+                fValue = CalculateDecay(thisEventKnowledge) * (CalculateCommonalities(npc, eventId)) * eventId.weight;
                 thisEventKnowledge.fValue = fValue;
                 return fValue;
             }
@@ -111,7 +115,8 @@ public class InteractionSystem : MonoBehaviour
         return fValue;
     }
 
-    public float calculateOpinion(NPCMentalModel npc) 
+    //Calculate an NPCs opinion of their known events
+    public float CalculateOpinion(NPCMentalModel npc) 
     {
         float sumOfValueFunctions = 0;
         float opinion = 0;
@@ -128,11 +133,14 @@ public class InteractionSystem : MonoBehaviour
         return opinion;
     }
 
-    public void shareEvent(NPCMentalModel npcA, NPCMentalModel npcB, float mood) 
+    //Share knowledge of an event
+    public void ShareEvent(NPCMentalModel npcA, NPCMentalModel npcB, float mood) 
     {
-        float trustVal = calculateTrust(npcA, npcB, mood);
+        float trustVal = CalculateTrust(npcA, npcB, mood);
         float commChance = Random.Range(0f, 1f);
+        float reliabilityChance = Random.Range(0f, 1f);
 
+        //Prior interaction check
         foreach (NPCInteractionMemory item in npcA.interactedNPCS)
         {
             if (item.interactedWith == npcB)
@@ -140,32 +148,43 @@ public class InteractionSystem : MonoBehaviour
                 trustVal += item.lastTrustValue / controller.repeatedConnectionRatio;
             }
         }
-
+        //Factional relationship check
         if (npcA.FactionId == npcB.FactionId)
         {
             trustVal += controller.repeatedConnectionRatio / 100;
         }
 
+
         if (trustVal > commChance)
         {
             Event eventToShare = npcA.events[Random.Range(0, (npcA.events.Capacity))];
 
-            if (!npcB.events.Contains(eventToShare))
+            if (npcA.memoryReliability > reliabilityChance)
             {
-                npcB.events.Add(eventToShare);
-                npcB.eventMemories.Add(new NPCEventMemory(eventToShare));
-                Instantiate(spawnables.NPCSharingIcon,npcB.transform);
+                if (!npcB.events.Contains(eventToShare))
+                {
+                    npcB.events.Add(eventToShare);
+                    npcB.eventMemories.Add(new NPCEventMemory(eventToShare));
+                    Instantiate(spawnables.NPCSharingIcon, npcB.transform);
+                }
+            }
+            else if (npcA.memoryReliability < reliabilityChance)
+            {
+                print("DEBUG: EVENT MUTATED! " +npcA.gameObject+ "'s attempt to tell " +npcB.gameObject+ " about " +eventToShare.EventId + " went wrong. The trust value was" +trustVal+ " , the comm value " +commChance+ " and the mutation value " +reliabilityChance);
             }
 
-
-            npcA.interactedNPCS.Add(new NPCInteractionMemory(npcB, trustVal, timekeeper.getRawTime()));
-            npcB.interactedNPCS.Add(new NPCInteractionMemory(npcA, trustVal, timekeeper.getRawTime()));
-
+            AddInteraction(npcA, npcB, trustVal);
         }
         else if(trustVal < commChance)
         {
             print("Trust value was " + trustVal + " and Comm chance was " + commChance);
         }
 
+    }
+
+    private void AddInteraction(NPCMentalModel npcA, NPCMentalModel npcB, float trustVal)
+    {
+        npcA.interactedNPCS.Add(new NPCInteractionMemory(npcB, trustVal, timekeeper.getRawTime()));
+        npcB.interactedNPCS.Add(new NPCInteractionMemory(npcA, trustVal, timekeeper.getRawTime()));
     }
 }

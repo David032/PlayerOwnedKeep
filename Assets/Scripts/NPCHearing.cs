@@ -30,7 +30,7 @@ public class NPCHearing : Sense
                     if (other.gameObject.GetComponent<NPCMentalModel>().events.Capacity != 0)
                     {
                         amInteracting = true;
-                        GetComponent<InteractionSystem>().shareEvent(MentalModel, other.GetComponent<NPCMentalModel>(), MentalModel.mood);
+                        GetComponent<InteractionSystem>().ShareEvent(MentalModel, other.GetComponent<NPCMentalModel>(), MentalModel.mood);
                         amInteracting = false;
                     }
                 }

@@ -16,7 +16,6 @@ public class NPCWandererBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("I am " + gameObject.name + " and my current area mask is " + agent.areaMask);
     }
 
     void Awake()

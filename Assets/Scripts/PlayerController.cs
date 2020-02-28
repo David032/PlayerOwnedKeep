@@ -27,9 +27,7 @@ public class PlayerController : MonoBehaviour
     void TestInventory() 
     {
         InventoryItem coinItem = Wallet.GetItem("coin");
-        print("coins in wallet at start: " + coinItem.quantity);
         coinItem.quantity -= 25;
-        print("coins in wallet:" + coinItem.quantity);
     }
 
     void Update()

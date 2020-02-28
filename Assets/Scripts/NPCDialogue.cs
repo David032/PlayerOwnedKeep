@@ -22,7 +22,6 @@ public class NPCDialogue : NPCDialogueCore
     {
         if (canTalk() & oneShot)
         {
-            print("DEBUG: CAN TALK!");
             spawnedDialogue = Instantiate(dialogueWindow, dialogueSpot.transform);
             spawnedDialogue.GetComponent<RectTransform>().localPosition.Set(0, 0, 0);
             spawnedDialogue.GetComponent<DialogueInstance>().NewDialogueInstance(true, false,dialogue,this.gameObject);

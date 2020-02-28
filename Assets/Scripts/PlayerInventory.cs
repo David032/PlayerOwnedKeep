@@ -10,7 +10,6 @@ public class PlayerInventory : MonoBehaviour
 
     void Start()
     {
-        print(Inventory.Capacity);
         Inventory.Capacity += 1;
         Inventory.Add(new Item(0, "Test item", "Test Description"));
     }

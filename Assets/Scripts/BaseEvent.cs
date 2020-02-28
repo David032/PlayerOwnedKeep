@@ -140,7 +140,6 @@ public class BaseEvent : MonoBehaviour
     public bool CalculateDistance() 
     {
         float distanceBetween = Vector3.Distance(player.transform.position, transform.position);
-        print(distanceBetween);
         if (distanceBetween < accessRange)
         {
             return true;

@@ -24,7 +24,6 @@ public class PlayerAction : BaseEvent
 
     private void OnMouseDown()
     {
-        print(CalculateDistance());
         if (!actionCompleted && CalculateDistance())
         {
             actionCompleted = true;

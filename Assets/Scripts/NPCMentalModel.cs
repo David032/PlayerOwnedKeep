@@ -115,9 +115,10 @@ public class NPCMentalModel : MonoBehaviour
             if (item.fValue < 0)
             {
                 print(gameObject + " destroyed " + item);
+                events.Remove(item.learntEvent);
+                eventMemories.Remove(item);
                 Destroy(item);
                 eventMemories.Sort();
-                //needs to lose the spot in memories
             }
         }
     }

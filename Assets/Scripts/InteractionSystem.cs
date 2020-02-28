@@ -1,19 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Random = UnityEngine.Random;
 
 public class InteractionSystem : MonoBehaviour
 {
     InteractionSystemController controller;
     SpawnableController spawnables;
     TimeManager timekeeper;
+    EventManager cardinal;
 
     void Start()
     {
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<InteractionSystemController>();
         spawnables = GameObject.FindGameObjectWithTag("GameController").GetComponent<SpawnableController>();
         timekeeper = GameObject.FindGameObjectWithTag("GameController").GetComponent<TimeManager>();
+        cardinal = GameObject.FindGameObjectWithTag("GameController").GetComponentInChildren<EventManager>();
     }
 
     //Calculate trust between 2 NPCs
@@ -177,6 +181,7 @@ public class InteractionSystem : MonoBehaviour
                 int randomReplacment = Random.Range(0, mutatedEvent.Categories.Capacity);
                 mutatedEvent.Categories.RemoveAt(randomReplacment);
                 mutatedEvent.Categories.Add((categories)Random.Range(0, Enum.GetNames(typeof(categories)).Length));
+                cardinal.Events.Add(mutatedEvent);
 
                 if (!npcB.events.Contains(mutatedEvent))
                 {

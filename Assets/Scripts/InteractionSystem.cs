@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -170,14 +170,27 @@ public class InteractionSystem : MonoBehaviour
             }
             else if (npcA.memoryReliability < reliabilityChance)
             {
-                print("DEBUG: EVENT MUTATED! " +npcA.gameObject+ "'s attempt to tell " +npcB.gameObject+ " about " +eventToShare.EventId + " went wrong. The trust value was" +trustVal+ " , the comm value " +commChance+ " and the mutation value " +reliabilityChance);
+                print("DEBUG: EVENT MUTATED! " +npcA.gameObject+ "'s attempt to tell " +npcB.gameObject+ " about " +eventToShare.EventId + " went wrong. " +
+                    "The trust value was" +trustVal+ " , the comm value " +commChance+ " and the mutation value " +reliabilityChance);
+
+                Event mutatedEvent = eventToShare;
+                int randomReplacment = Random.Range(0, mutatedEvent.Categories.Capacity);
+                mutatedEvent.Categories.RemoveAt(randomReplacment);
+                mutatedEvent.Categories.Add((categories)Random.Range(0, Enum.GetNames(typeof(categories)).Length));
+
+                if (!npcB.events.Contains(mutatedEvent))
+                {
+                    npcB.events.Add(mutatedEvent);
+                    npcB.eventMemories.Add(new NPCEventMemory(mutatedEvent));
+                    Instantiate(spawnables.NPCSharingIcon, npcB.transform);
+                }
             }
 
             AddInteraction(npcA, npcB, trustVal);
         }
-        else if(trustVal < commChance)
+        else if(trustVal > commChance)
         {
-            print("Trust value was " + trustVal + " and Comm chance was " + commChance);
+            print("DEBUG: EVENT FAILED - Trust value was " + trustVal + " and Comm chance was " + commChance);
         }
 
     }

@@ -177,12 +177,26 @@ public class InteractionSystem : MonoBehaviour
                 print("DEBUG: EVENT MUTATED! " +npcA.gameObject+ "'s attempt to tell " +npcB.gameObject+ " about " +eventToShare.EventId + " went wrong. " +
                     "The trust value was" +trustVal+ " , the comm value " +commChance+ " and the mutation value " +reliabilityChance);
 
-                Event mutatedEvent = eventToShare;
-                int randomReplacment = Random.Range(0, mutatedEvent.Categories.Capacity);
-                mutatedEvent.Categories.RemoveAt(randomReplacment);
-                mutatedEvent.Categories.Add((categories)Random.Range(0, Enum.GetNames(typeof(categories)).Length));
-                cardinal.Events.Add(mutatedEvent);
+                Event mutatedEvent = cardinal.gameObject.AddComponent<Event>();
+                mutatedEvent.EventId = "Mutated: " + eventToShare.EventId;
+                mutatedEvent.weight = eventToShare.weight;
+                mutatedEvent.memorable = eventToShare.memorable;
 
+                List<categories> originalEventsCats = new List<categories>();
+                foreach (categories item in eventToShare.Categories)
+                {
+                    originalEventsCats.Add(item);
+                }
+
+                int randomReplacment = Random.Range(0, originalEventsCats.Capacity);
+                originalEventsCats.RemoveAt(randomReplacment);
+                categories replacment = (categories)Random.Range(0, Enum.GetNames(typeof(categories)).Length);
+                originalEventsCats.Add(replacment);
+
+                mutatedEvent.Categories = originalEventsCats;
+
+
+                cardinal.Events.Add(mutatedEvent);
                 if (!npcB.events.Contains(mutatedEvent))
                 {
                     npcB.events.Add(mutatedEvent);

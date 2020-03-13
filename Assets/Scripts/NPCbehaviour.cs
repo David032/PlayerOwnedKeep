@@ -30,10 +30,15 @@ public class NPCbehaviour : MonoBehaviour
     float WandererTimeAtPlace;
     float DesiredTimeAtWanderedPlace = 15f;
 
+    public Transform workplace;
+    public Transform homeplace;
+    TimeManager timeManager;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        timeManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<TimeManager>();
 
         switch (NPCBehaviourModel)
         {
@@ -58,45 +63,82 @@ public class NPCbehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawLine(transform.position, agent.destination);
-
         switch (NPCBehaviourModel)
         {
             case Behaviour.Traveller:
-                if (!agent.pathPending && agent.remainingDistance < 0.5f)
-                {
-                    TravellerTimeAtPlace += Time.deltaTime;
-                    if (TravellerTimeAtPlace > DesiredTimeAtPlace)
-                    {
-                        TravelToNextPoint();
-                    }
-                    else if (TravellerTimeAtPlace < DesiredTimeAtPlace)
-                    {
-                        //Have him wander inbetween here?
-                    }
-                }
+                TravellerBehaviour();
                 break;
+
             case Behaviour.Trader:
-                break;
-            case Behaviour.Wanderer:
-                if (!agent.pathPending && agent.remainingDistance < 2.5f)
+                if (timeManager.timeCycle == Cycle.Day)
                 {
-                    WandererTimeAtPlace += Time.deltaTime;
-                    if (WandererTimeAtPlace > DesiredTimeAtWanderedPlace)
-                    {
-                        WanderSomewhere();
-                    }
+                    agent.SetDestination(workplace.transform.position);
                 }
+                else if (timeManager.timeCycle == Cycle.Night)
+                {
+                    agent.SetDestination(homeplace.transform.position);
+                }
+
+                if (Vector3.Distance(this.transform.position, homeplace.transform.position) < 5f)
+                {
+                    GetComponent<CapsuleCollider>().enabled = false;
+                    GetComponent<NPCHearing>().enabled = false;
+                    GetComponent<NPCperspective>().enabled = false;
+                }
+                else if (Vector3.Distance(this.transform.position, homeplace.transform.position) > 5f)
+                {
+                    GetComponent<CapsuleCollider>().enabled = true;
+                    GetComponent<NPCHearing>().enabled = true;
+                    GetComponent<NPCperspective>().enabled = true;
+                }
+
+                break;
+
+            case Behaviour.Wanderer:
+                WandererBehaviour();
                 break;
             case Behaviour.Guard:
                 //There's no behaviour here intentionally
                 break;
             case Behaviour.Patroller:
-                if (!agent.pathPending && agent.remainingDistance < 0.5f)
-                    GotoNextPoint();
+                PatrollerBehaviour();
                 break;
             default:
                 break;
+        }
+    }
+
+    private void TravellerBehaviour()
+    {
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        {
+            TravellerTimeAtPlace += Time.deltaTime;
+            if (TravellerTimeAtPlace > DesiredTimeAtPlace)
+            {
+                TravelToNextPoint();
+            }
+            else if (TravellerTimeAtPlace < DesiredTimeAtPlace)
+            {
+                //Have him wander inbetween here?
+            }
+        }
+    }
+
+    private void PatrollerBehaviour()
+    {
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            GotoNextPoint();
+    }
+
+    private void WandererBehaviour()
+    {
+        if (!agent.pathPending && agent.remainingDistance < 2.5f)
+        {
+            WandererTimeAtPlace += Time.deltaTime;
+            if (WandererTimeAtPlace > DesiredTimeAtWanderedPlace)
+            {
+                WanderSomewhere();
+            }
         }
     }
 

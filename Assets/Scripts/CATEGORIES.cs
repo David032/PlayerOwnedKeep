@@ -34,5 +34,14 @@ public enum categories
     NotImportant,
     Important,
     Death,
-    Life
+    Life,
+    Town,
+    City,
+    Royalty,
+    Peasents,
+    Crime,
+    Murder,
+    Theft,
+
+
 }

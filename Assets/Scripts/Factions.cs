@@ -7,7 +7,8 @@ public enum Faction
     None,
     TownA,
     TownB,
-    VillageA
+    VillageA,
+    City
 }
 
 

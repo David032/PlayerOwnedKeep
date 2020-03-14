@@ -42,6 +42,11 @@ public enum categories
     Crime,
     Murder,
     Theft,
+    Magic,
+    Melee,
+    Ranged,
+    Order,
+    Chaos
 
 
 }

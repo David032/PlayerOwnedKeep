@@ -1860,6 +1860,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6504199714865466666, guid: 9952bbd97819ed544a9f121971091369,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9952bbd97819ed544a9f121971091369, type: 3}
 --- !u!4 &57135460 stripped
@@ -4387,7 +4392,7 @@ Transform:
   - {fileID: 279281877}
   - {fileID: 139309281}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &153564160
 GameObject:
@@ -6277,6 +6282,11 @@ PrefabInstance:
     - target: {fileID: 402444, guid: e5ba9ea9313a263419e66f4ed62f0fce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215830009039206194, guid: e5ba9ea9313a263419e66f4ed62f0fce,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8955740499393207544, guid: e5ba9ea9313a263419e66f4ed62f0fce,
         type: 3}
@@ -9697,6 +9707,11 @@ PrefabInstance:
     - target: {fileID: 443762, guid: 9952bbd97819ed544a9f121971091369, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504199714865466666, guid: 9952bbd97819ed544a9f121971091369,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9952bbd97819ed544a9f121971091369, type: 3}
@@ -14816,7 +14831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 158178, guid: 5aa30891913dc934fa50d8fc19f4fde3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 410528, guid: 5aa30891913dc934fa50d8fc19f4fde3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18452,7 +18467,7 @@ Transform:
   - {fileID: 1078141776}
   - {fileID: 736810320}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &629440093
 PrefabInstance:
@@ -18965,7 +18980,7 @@ PrefabInstance:
     - target: {fileID: 6488569944584568505, guid: 3e2879d38c20cd44f80951ebd971a228,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6488569944584568505, guid: 3e2879d38c20cd44f80951ebd971a228,
         type: 3}
@@ -21366,6 +21381,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 153564161}
     m_Modifications:
+    - target: {fileID: -1750088136593134400, guid: 1a20759b8f3beda469b200e4e682bfe3,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 170694, guid: 1a20759b8f3beda469b200e4e682bfe3, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Gladiator_Open
@@ -21438,6 +21458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102810661706722664, guid: 1a20759b8f3beda469b200e4e682bfe3,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a20759b8f3beda469b200e4e682bfe3, type: 3}
@@ -22595,7 +22620,7 @@ Transform:
   - {fileID: 1643582394}
   - {fileID: 623776241}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &760199466
 GameObject:
@@ -23458,6 +23483,11 @@ PrefabInstance:
       propertyPath: homeplace
       value: 
       objectReference: {fileID: 1412784900}
+    - target: {fileID: -90184669639720032, guid: 466500cb85b992047bd0ec47ba231fa5,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 159076, guid: 466500cb85b992047bd0ec47ba231fa5, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Princess
@@ -23817,7 +23847,7 @@ MonoBehaviour:
   EventWeight: 0.1
   refremceId: 0
   EventType: 0
-  spawnables: {fileID: 0}
+  spawnables: {fileID: 1552269562}
   accessRange: 5
   requiredItem: 1
   questCompletedMessage: You found my gems! Thank you
@@ -31458,7 +31488,7 @@ Transform:
   - {fileID: 1381600129}
   - {fileID: 1742864664591539618}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1015433852
 PrefabInstance:
@@ -32843,6 +32873,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99999976, y: 7, z: 46.858982}
   m_Center: {x: 2, y: 0, z: 19.929497}
+--- !u!1 &1060234051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 170694, guid: 1a20759b8f3beda469b200e4e682bfe3,
+    type: 3}
+  m_PrefabInstance: {fileID: 735278277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1060234066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060234051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8abcc2ccd8d0543975eb5e6af9c305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: The player murdered a man!
+  EventCategories: 01000000030000001a000000240000001d000000
+  IsEventUnforgetabble: 0
+  EventWeight: 1
+  refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 1552269562}
+  accessRange: 2
+  message: 'You sneak up on the warrior and swiftly kill him! '
 --- !u!1001 &1061870512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33676,6 +33733,11 @@ PrefabInstance:
       propertyPath: workplace
       value: 
       objectReference: {fileID: 59410309}
+    - target: {fileID: -489526675886705576, guid: c80d63d739f7231458975214a486d247,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 180650, guid: c80d63d739f7231458975214a486d247, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_PeasantWoman_01
@@ -34630,6 +34692,11 @@ PrefabInstance:
       propertyPath: homeplace
       value: 
       objectReference: {fileID: 452805112}
+    - target: {fileID: -2833293040426647376, guid: 1ae6e4e008749404d95ce29b596ce5e0,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 108508, guid: 1ae6e4e008749404d95ce29b596ce5e0, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Wizard
@@ -35157,6 +35224,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 153564161}
     m_Modifications:
+    - target: {fileID: -2587072859577150646, guid: d2c67be88e27572428275a0ad8bb6b78,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -1116846514481922793, guid: d2c67be88e27572428275a0ad8bb6b78,
         type: 3}
       propertyPath: WandererPoints.Array.size
@@ -35476,12 +35548,12 @@ PrefabInstance:
     - target: {fileID: -8624676922661300073, guid: 45378b2d5820a5f4e9fb8e893a852622,
         type: 3}
       propertyPath: FactionId
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8624676922661300073, guid: 45378b2d5820a5f4e9fb8e893a852622,
         type: 3}
       propertyPath: EnableDebug
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 163930, guid: 45378b2d5820a5f4e9fb8e893a852622, type: 3}
       propertyPath: m_Name
@@ -35870,7 +35942,7 @@ PrefabInstance:
     - target: {fileID: 1110543754860244581, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00028071855
+      value: 0.0005045063
       objectReference: {fileID: 0}
     - target: {fileID: 1111110942749831614, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
@@ -36212,6 +36284,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4946492406720591620, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 85001209}
     - target: {fileID: 5156242445127658364, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -36397,11 +36474,26 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5741536641399475626, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 636125126}
+    - target: {fileID: 5909612810795904303, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 814600375}
     - target: {fileID: 5998252911472587587, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6084838110957059331, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 936482814}
     - target: {fileID: 6119945249710205209, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -36472,6 +36564,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6358154305811776377, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 980599165}
     - target: {fileID: 6366606730210893282, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -36547,6 +36644,31 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7103526756378873609, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103526756378873609, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103526756378873609, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103526756378873609, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103526756378873609, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7134854220912978172, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -36565,6 +36687,11 @@ PrefabInstance:
     - target: {fileID: 7134854220912978172, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134854220912978172, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7158947484437621165, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
@@ -36592,6 +36719,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7289677416152409171, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
+        type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 390837202}
     - target: {fileID: 7503485193700546803, guid: 17bd0f1180dfd924f8c0fed8a620c26e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -37208,6 +37340,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 4c4457d0bbb5ba04bac70d5b359effa0, type: 3}
+--- !u!114 &1159310231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159310227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8abcc2ccd8d0543975eb5e6af9c305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: The player purified the fountain
+  EventCategories: 000000002000000026000000
+  IsEventUnforgetabble: 0
+  EventWeight: 0.5
+  refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 1552269562}
+  accessRange: 10
+  message: You purify the fountain
 --- !u!1001 &1161203108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45008,7 +45161,7 @@ Transform:
   - {fileID: 1456211903}
   - {fileID: 1699899194}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1410584593
 PrefabInstance:
@@ -46583,6 +46736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8201776908003890937, guid: c69439a7eeb796d429a19aac66206c85,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c69439a7eeb796d429a19aac66206c85, type: 3}
@@ -48992,6 +49150,107 @@ Transform:
   m_Father: {fileID: 624134804}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1531460997
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100412, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_Name
+      value: SF_Prop_Chest_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 212.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 288.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8740267
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.48587778
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -121.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 412872, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5df14fae1373f14db8344cb2024e81f, type: 3}
+--- !u!1 &1531460998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100412, guid: f5df14fae1373f14db8344cb2024e81f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1531460997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1531460999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531460998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce67567140d2484e8bfdcbbd3a15ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: 
+  EventCategories: 
+  IsEventUnforgetabble: 0
+  EventWeight: 0.75
+  refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 1552269562}
+  accessRange: 10
+  message: Oh look, a chest full of swords!
+  idToAdd: 17
+  nameOfItem: Chest of Swords
+  descriptionOfItem: A chest full of swords
+--- !u!64 &1531461000
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531460998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 5877c3e07e223b94f9b26d5fc4ea2c65, type: 3}
 --- !u!1 &1540038313
 GameObject:
   m_ObjectHideFlags: 0
@@ -49210,6 +49469,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4071fab48e4c20340b72c6d9e1442c18, type: 3}
+--- !u!114 &1552269562 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 144554029891098364, guid: 3e2879d38c20cd44f80951ebd971a228,
+    type: 3}
+  m_PrefabInstance: {fileID: 642557912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7892051d9524fbe4e9b89777e21f473b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1553173322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49814,6 +50085,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 153564161}
     m_Modifications:
+    - target: {fileID: -3576111825558477009, guid: 3b17d2db7617dd643940c4be66ab5713,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 194086, guid: 3b17d2db7617dd643940c4be66ab5713, type: 3}
       propertyPath: m_Name
       value: SF_Character_Elf_Assassin
@@ -52482,6 +52758,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 153564161}
     m_Modifications:
+    - target: {fileID: -8623036000484466155, guid: 8597f95fd90a4844484d54b8070331d5,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -5665964186394784494, guid: 8597f95fd90a4844484d54b8070331d5,
         type: 3}
       propertyPath: TravellerPoints.Array.size
@@ -54959,6 +55240,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1035911584184815913, guid: 155f36a7e97d7d9489dd67fac44d4d47,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1529035536853851707, guid: 155f36a7e97d7d9489dd67fac44d4d47,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -56210,6 +56496,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a061d33e9f404ad4eb8462bed1c0a2ea, type: 3}
+--- !u!1 &1763429219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 136270, guid: a061d33e9f404ad4eb8462bed1c0a2ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1763429218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1763429220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763429219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691340cfb05677142a7b6b59d3be6220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: The player found a chest of swords and returned them
+  EventCategories: 0700000012000000
+  IsEventUnforgetabble: 0
+  EventWeight: 0.35
+  refremceId: 0
+  EventType: 0
+  spawnables: {fileID: 1552269562}
+  accessRange: 2
+  requiredItem: 17
+  questCompletedMessage: Thank you for finding my chest!
+--- !u!114 &1763429221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763429219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716819c21d0fcde45abd660582a4d5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneShot: 1
+  dialogue: Have you seen my chest of swords? Someone stole it
 --- !u!1001 &1768366916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60141,6 +60469,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8656803206336520908, guid: 304528b0d453fca42a6f8861aa2ce0bb,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 304528b0d453fca42a6f8861aa2ce0bb, type: 3}
 --- !u!4 &1873145998 stripped
@@ -60430,8 +60763,8 @@ MonoBehaviour:
   idToAdd: 5
   nameOfItem: Cat
   descriptionOfItem: Meow?
---- !u!65 &1878681797
-BoxCollider:
+--- !u!64 &1878681797
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -60440,9 +60773,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.23291, y: 7.142494, z: 4.270981}
-  m_Center: {x: 0.010009766, y: 3.5458794, z: -0.2062912}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: b73a1085a2bca3549941b6c0be8fc55d, type: 3}
 --- !u!4 &1878681798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 433740, guid: 05ada695a69f7274f8a6562f8c72503d,
@@ -63151,7 +63485,7 @@ Transform:
   - {fileID: 153564161}
   - {fileID: 2075261809}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1947762124 stripped
 Transform:
@@ -63791,7 +64125,7 @@ Transform:
   - {fileID: 1839632890}
   - {fileID: 133557558}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1976785051
 PrefabInstance:
@@ -65096,6 +65430,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8201776908003890937, guid: c69439a7eeb796d429a19aac66206c85,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c69439a7eeb796d429a19aac66206c85, type: 3}
@@ -66986,6 +67325,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 153564161}
     m_Modifications:
+    - target: {fileID: -7815392361589030845, guid: cb3ee88ed3236544bbbc13d60a79d21f,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -2169877137561702922, guid: cb3ee88ed3236544bbbc13d60a79d21f,
         type: 3}
       propertyPath: PatrollerPoints.Array.size
@@ -69494,6 +69838,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 153564161}
     m_Modifications:
+    - target: {fileID: -5973563147350915086, guid: feee25723b3093a4f85ff5bd82d38dec,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 115122, guid: feee25723b3093a4f85ff5bd82d38dec, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Bard
@@ -69616,6 +69965,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 153564161}
     m_Modifications:
+    - target: {fileID: -1409586014943601550, guid: a718ebd87a9d863409aff895ccf85aae,
+        type: 3}
+      propertyPath: FactionId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 115408, guid: a718ebd87a9d863409aff895ccf85aae, type: 3}
       propertyPath: m_Name
       value: SF_Character_Human_Bartender
@@ -69674,6 +70028,11 @@ PrefabInstance:
       propertyPath: workplace
       value: 
       objectReference: {fileID: 329546254}
+    - target: {fileID: 2952928850266153545, guid: a718ebd87a9d863409aff895ccf85aae,
+        type: 3}
+      propertyPath: NPCBehaviourModel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8780433215828834207, guid: a718ebd87a9d863409aff895ccf85aae,
         type: 3}
       propertyPath: m_textInfo.characterCount

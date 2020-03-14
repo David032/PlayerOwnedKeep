@@ -112,7 +112,7 @@ public class NPCMentalModel : MonoBehaviour
     {
         foreach (NPCEventMemory item in eventMemories)
         {
-            if (item.fValue < 0)
+            if (item.fValue < 0 && !item.learntEvent.memorable)
             {
                 events.Remove(item.learntEvent);
                 eventMemories.Remove(item);

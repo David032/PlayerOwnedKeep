@@ -46,7 +46,9 @@ public enum categories
     Melee,
     Ranged,
     Order,
-    Chaos
+    Chaos,
+    Funny,
+    Boring
 
 
 }

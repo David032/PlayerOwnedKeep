@@ -13,12 +13,11 @@ public class NPCMentalModel : MonoBehaviour
     public List<Event> events;
     public List<Event> unforgettableEvents;
     public List<NPCEventMemory> eventMemories;
-    public float opinion = 0;
     public List<NPCInteractionMemory> interactedNPCS;
 
+    public float opinion = 0;
     [Range(0,1)]
     public float mood = 1;
-
     [Range(0.1f, 1f)]
     public float memoryReliability = 0.95f;
 

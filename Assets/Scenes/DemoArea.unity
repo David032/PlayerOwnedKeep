@@ -28889,11 +28889,6 @@ PrefabInstance:
       propertyPath: FactionId
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -1409586014943601550, guid: a718ebd87a9d863409aff895ccf85aae,
-        type: 3}
-      propertyPath: EnableDebug
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -1095537154633144850, guid: a718ebd87a9d863409aff895ccf85aae,
         type: 3}
       propertyPath: m_Enabled
